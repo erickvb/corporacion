@@ -4,6 +4,7 @@ class Producto_model extends CI_Model {
 	{
 		// Call the CI_Model constructor
 		parent::__construct();
+		//test down
 	}
 	
 	function get_ultimas_ofertas(){
