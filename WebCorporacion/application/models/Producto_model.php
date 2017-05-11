@@ -4,6 +4,7 @@ class Producto_model extends CI_Model {
 	{
 		// Call the CI_Model constructor
 		parent::__construct();
+		//test sincronizada
 	}
 	
 	function get_ultimas_ofertas(){
@@ -41,7 +42,7 @@ class Producto_model extends CI_Model {
 		left join adempiere.M_PriceList_Version pricev
 		on (pprice.M_PriceList_Version_ID=pricev.M_PriceList_Version_ID)
 		left join adempiere.M_PriceList_Version lversion
-		on (pricev.M_PriceList_Version_ID=1000027)
+		on (pricev.M_PriceList_Version_ID=1000000)
 		left join adempiere.M_PriceList lista
 		on (lversion.M_PriceList_ID=lista.M_PriceList_ID)
 		left join adempiere.C_Currency mone
@@ -50,7 +51,7 @@ class Producto_model extends CI_Model {
 		pro.isactive='Y' and
 		pro.is_ultimas_ofertas='Y'
 		and
-		pricev.M_PriceList_Version_ID=1000027
+		pricev.M_PriceList_Version_ID=1000000
 		and
 		lista.M_PriceList_ID=1000026 ";
 	
@@ -121,7 +122,7 @@ class Producto_model extends CI_Model {
 				left join adempiere.M_PriceList_Version pricev
 				on (pprice.M_PriceList_Version_ID=pricev.M_PriceList_Version_ID)
 				left join adempiere.M_PriceList_Version lversion
-				on (pricev.M_PriceList_Version_ID=1000027)
+				on (pricev.M_PriceList_Version_ID=1000000)
 				left join adempiere.M_PriceList lista
 				on (lversion.M_PriceList_ID=lista.M_PriceList_ID)
 				left join adempiere.C_Currency mone
@@ -130,7 +131,7 @@ class Producto_model extends CI_Model {
 				pro.isactive='Y' and
 				pro.m_product_category_id=".$m_product_category_id."
 				and
-				pricev.M_PriceList_Version_ID=1000027
+				pricev.M_PriceList_Version_ID=1000000
 				and
 				lista.M_PriceList_ID=1000026 ".$condicion;
 	
@@ -171,7 +172,7 @@ class Producto_model extends CI_Model {
 				left join adempiere.M_PriceList_Version pricev
 				on (pprice.M_PriceList_Version_ID=pricev.M_PriceList_Version_ID)
 				left join adempiere.M_PriceList_Version lversion
-				on (pricev.M_PriceList_Version_ID=1000027)
+				on (pricev.M_PriceList_Version_ID=1000000)
 				left join adempiere.M_PriceList lista
 				on (lversion.M_PriceList_ID=lista.M_PriceList_ID)
 				left join adempiere.C_Currency mone
@@ -181,7 +182,7 @@ class Producto_model extends CI_Model {
 				where
 				pro.isactive='Y'
 				--and
-				--pricev.M_PriceList_Version_ID=1000027
+				--pricev.M_PriceList_Version_ID=1000000
 				--and
 				--lista.M_PriceList_ID=1000026 
 				limit ".$limit." offset ".$offset;
@@ -214,7 +215,7 @@ class Producto_model extends CI_Model {
 				left join adempiere.M_PriceList_Version pricev
 				on (pprice.M_PriceList_Version_ID=pricev.M_PriceList_Version_ID)
 				left join adempiere.M_PriceList_Version lversion
-				on (pricev.M_PriceList_Version_ID=1000027)
+				on (pricev.M_PriceList_Version_ID=1000000)
 				left join adempiere.M_PriceList lista
 				on (lversion.M_PriceList_ID=lista.M_PriceList_ID)
 				left join adempiere.C_Currency mone
@@ -226,7 +227,7 @@ class Producto_model extends CI_Model {
 				.$where;
 				
 				/*--and
-				--pricev.M_PriceList_Version_ID=1000027
+				--pricev.M_PriceList_Version_ID=1000000
 				--and
 				--lista.M_PriceList_ID=1000026 */
 		//echo $sql;
@@ -278,7 +279,7 @@ class Producto_model extends CI_Model {
 				left join adempiere.M_PriceList_Version pricev
 				on (pprice.M_PriceList_Version_ID=pricev.M_PriceList_Version_ID)
 				left join adempiere.M_PriceList_Version lversion
-				on (pricev.M_PriceList_Version_ID=1000027)
+				on (pricev.M_PriceList_Version_ID=1000000)
 				left join adempiere.M_PriceList lista
 				on (lversion.M_PriceList_ID=lista.M_PriceList_ID)
 				left join adempiere.C_Currency mone
@@ -296,7 +297,7 @@ class Producto_model extends CI_Model {
 		$query = $this->db->query($sql);
 	/* id_categoria
 	 *           --and
-				--pricev.M_PriceList_Version_ID=1000027
+				--pricev.M_PriceList_Version_ID=1000000
 				--and
 				--lista.M_PriceList_ID=1000026
 	 * */
@@ -338,7 +339,7 @@ class Producto_model extends CI_Model {
               left join adempiere.M_PriceList_Version pricev
               on (pprice.M_PriceList_Version_ID=pricev.M_PriceList_Version_ID)
               left join adempiere.M_PriceList_Version lversion
-              on (pricev.M_PriceList_Version_ID=1000027)
+              on (pricev.M_PriceList_Version_ID=1000000)
               left join adempiere.M_PriceList lista
               on (lversion.M_PriceList_ID=lista.M_PriceList_ID)
               left join adempiere.C_Currency mone
@@ -351,7 +352,7 @@ class Producto_model extends CI_Model {
              ";
 	/*
 	  		 and
-              pricev.M_PriceList_Version_ID=1000027
+              pricev.M_PriceList_Version_ID=1000000
               and
               lista.M_PriceList_ID=1000026
 	 */
