@@ -120,3 +120,10 @@
 	<!-- End .footer-bottom -->
 </footer>
 <!-- End .footer -->
+
+<script src="<?=base_url()?>public/assets/js/plugins.min.js"></script>
+    <script src="<?=base_url()?>public/assets/js/main.js"></script>
+    <script src="<?=base_url()?>public/static/js/handlebar1.0.js"></script>
+    
+    <script src="<?=base_url()?>public/static/js/main-corpo.js"></script>
+    

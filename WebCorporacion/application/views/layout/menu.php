@@ -183,53 +183,10 @@
 							</a>
 
 							<div class="dropdown-menu">
-								<p>
-									2 item(s) in your cart - <span class="text-custom">$665.00</span>
+								<p id="total-cart">
+								
 								</p>
-								<div class="dcart-products">
-									<div class="product product-sm">
-										<figure>
-											<a href="#"> <img
-												src="assets/images/products/thumbs/product1.jpg"
-												alt="Product">
-											</a>
-										</figure>
-										<div class="product-meta">
-											<h5 class="product-title">
-												<a href="#">Draped sleeve detail shirt</a>
-											</h5>
-											<div class="product-price-container">
-												<span class="product-price">$280.00</span>
-											</div>
-											<!-- End .product-price-container -->
-										</div>
-										<!-- End .product-meta -->
-										<a href="#" class="icon delete-btn lighter"
-											title="Delete Product"><span class="sr-only">Delete product</span></a>
-									</div>
-									<!-- End .product -->
-									<div class="product product-sm">
-										<figure>
-											<a href="#"> <img
-												src="assets/images/products/thumbs/product2.jpg"
-												alt="Product">
-											</a>
-										</figure>
-										<div class="product-meta">
-											<h5 class="product-title">
-												<a href="#">Draped wrap white blouse</a>
-											</h5>
-											<div class="product-price-container">
-												<span class="product-old-price">$1500.00</span> <span
-													class="product-price">$750.00</span>
-											</div>
-											<!-- End .product-price-container -->
-										</div>
-										<!-- End .product-meta -->
-										<a href="#" class="icon delete-btn lighter"
-											title="Delete Product"><span class="sr-only">Delete product</span></a>
-									</div>
-									<!-- End .product -->
+								<div class="dcart-products" id="menu-resumen-carrito">
 								</div>
 								<!-- End .dcart-products -->
 
@@ -248,12 +205,14 @@
 									<!-- End .dcart-action-info -->
 
 									<div class="dcart-action">
-										<a href="#" class="btn btn-custom4 btn-sm">View Cart</a> <a
+										<a href="<?=site_url('carrito/lista')?>" class="btn btn-custom4 btn-sm">View Cart</a> <a
 											href="#" class="btn btn-custom btn-sm">Checkout</a>
 									</div>
 									<!-- End .dcart-action -->
+									
 								</div>
 								<!-- End .dcart-action-container -->
+								
 							</div>
 							<!-- End .dropdown-menu -->
 						</div>
@@ -297,3 +256,26 @@
 	</nav>
 </header>
 <!-- End .header -->
+
+<script id="cart-resumen" type="text/x-handlebars-template">
+<div class="product product-sm">
+										<figure>
+											<a href="#"> <img
+												src="assets/images/products/thumbs/product1.jpg"
+												alt="Product">
+											</a>
+										</figure>
+										<div class="product-meta">
+											<h5 class="product-title">
+												<a href="#">{{name}}</a>
+											</h5>
+											<div class="product-price-container">
+												<span class="product-price">{{money}}{{subtotal}}</span>
+											</div>
+											<!-- End .product-price-container -->
+										</div>
+										<!-- End .product-meta -->
+										<a href="#" class="icon delete-btn lighter"
+											title="Delete Product"><span class="sr-only">Delete product</span></a>
+									</div>
+</script>

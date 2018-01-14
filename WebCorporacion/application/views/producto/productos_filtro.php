@@ -95,7 +95,7 @@
                                             </div><!-- End .product-price-container -->
 
                                             <div class="product-action">
-                                                <a href="#" class="btn-add-cart" title="Add to Cart"><i class="icon icon-cart"></i> <span>Agregar a carrito</span></a>
+                                                <a href="#" class="btn-add-cart" title="Add to Cart" id-item="<?=$producto->m_product_id?>"><i class="icon icon-cart"></i> <span>Agregar a carrito</span></a>
                                                 <a href="#" class="icon btn-product-like" title="Like"><span class="sr-only">Like</span></a>
                                                 <a href="#" class="icon btn-product-compare" title="Compare"><span class="sr-only">Compare</span></a>
                                             </div><!-- End .product-action -->
@@ -318,9 +318,7 @@
 		</div><!-- End #wrapper -->
 
         <!-- End -->
-        <script src="<?=base_url()?>public/assets/js/plugins.min.js"></script>
-        <script src="<?=base_url()?>public/assets/js/main.js"></script>
-		<script src="<?=base_url()?>public/static/js/main-corpo.js"></script>
+      
         <script>
       
             (function($) {

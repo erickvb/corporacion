@@ -52,9 +52,7 @@
  	  </div><!-- End .main -->
  	<? $this->load->view("layout/footer");?>
  	</div><!-- End #wrapper -->
- 	<script src="<?=base_url()?>public/assets/js/plugins.min.js"></script>
-    <script src="<?=base_url()?>public/assets/js/main.js"></script>
-    <script src="<?=base_url()?>public/static/js/main-corpo.js"></script>
+ 	
 	<script>
    
 	
