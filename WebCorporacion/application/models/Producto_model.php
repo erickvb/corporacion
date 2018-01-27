@@ -519,7 +519,7 @@ class Producto_model extends CI_Model {
 	}
 	
 	// EN PRUEBA AUN NO SE USA
-	function guardaPedido(){
+	function guardaPedido($data,$id_user){
 	
 	
 		$this->db->select_max('cdt_order_id');
@@ -548,8 +548,42 @@ class Producto_model extends CI_Model {
 				'processed' => 'N',
 				 
 		);
-		$this->db->insert('cdt_order', $data);
-	
+		
+		$data_insert = array(
+		    'cdt_order_id' => $c_order_id,
+		    
+		    'm_product_id' => $data['id'],  // id del producto seleccionado
+		    'cdt_idfb' => $id_user,    //id del usuario del pedido
+		    
+		    //'pricelimit'=> $data['pricelimit'],
+		    'pricestd'=> $data['price'],
+		    'qty'=> $data['qty'],
+		    'description'=> $data['name'],
+		    'cdt_puntos'=>0,
+		    //'url_image' => $data['url_image'],
+		    //'cursymbol' => $data['cursymbol'],
+		    
+		    'c_bpartner_id' => $data['c_bpartner_id'],
+		    'cdt_proveedornombre' => $data['prov_nombre'] ,
+		    'cdt_proveedorruc' => $data['prov_ruc'],
+		    'cdt_proveedordireccion' => $data['prov_dire'],
+		    
+		    'cdt_referidonombre' => $data['cdt_referidonombre'],
+		    'cdt_referidocorreo' => $data['cdt_referidocorreo'],
+		    'cdt_referidodni' => $data['cdt_referidodni'],
+		    'cdt_idfb'=>$i,
+		    'ad_org_id' => 0,
+		    'createdby' => 100,
+		    'updatedby' => 100,
+		    'grandtotal' => 0,
+		    'ad_client_id' => 0,
+		    'processed' => 'N',
+		    
+		);
+		
+		$this->db->insert('cdt_order', $data_insert); 
+		
+
 	
 	}
 	

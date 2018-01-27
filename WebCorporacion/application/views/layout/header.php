@@ -1,5 +1,5 @@
  		<meta charset="utf-8">
-        <title>Sconto - Premium eCommerce Template</title>
+        <title>Corporaci&oacute;n de respuestos</title>
         <meta name="description" content="Premium eCommerce Template">
 
         <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->

@@ -6,190 +6,66 @@
                                 <table class="table table-bordered cart-table">
                                     <thead>
                                         <tr>
-                                            <th class="product-col">Product Name</th>
-                                            <th class="code-col">Product Code</th>
-                                            <th class="price-col">Unit Price</th>
-                                            <th class="quantity-col">Quantity</th>
+                                            <th class="product-col"> Nombre de producto</th>
+                                            <th class="code-col">Codigo</th>
+                                            <th class="price-col">Precio unitario</th>
+                                            <th class="quantity-col">Cantidad</th>
                                             <th class="subtotal-col">Subtotal</th>
                                             <th class="delete-col"><i class="icon delete-btn"></i></th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
+                                    
+                                    <?php foreach ($lista_cart as $items){?>
                                         <tr>
                                             <td class="product-col">
                                                 <div class="product">
                                                     <div class="product-top">
-                                                        <span class="product-label discount">-25%</span>
+                                                    
+                                                    <!--     <span class="product-label discount">-25%</span> -->
                                                         <figure>
                                                             <a href="#">
-                                                                <img src="assets/images/products/product1.jpg" alt="Product Image">
+                                                                <img src="<?=$items['options']['imagen']?>" alt="Product Image">
                                                             </a>
                                                         </figure>
                                                     </div><!-- End .product-top -->
 
                                                     <div class="product-content-wrapper">
                                                         <h3 class="product-title">
-                                                            <a href="#">Navy blue silk pleated<br>dress</a>
+                                                            <a href="#"><?=$items['name']?></a>
                                                         </h3>
-                                                        <ul>
-                                                            <li><span>Color:</span> Black</li>
-                                                            <li><span>Size:</span> XS</li>
-                                                        </ul>
+<!--                                                         <ul> -->
+<!--                                                             <li><span>Color:</span> Black</li> -->
+<!--                                                             <li><span>Size:</span> XS</li> -->
+<!--                                                         </ul> -->
                                                     </div><!-- End .product-content-wrapper -->
                                                 </div><!-- End .product -->
                                             </td>
-                                            <td class="code-col">483 512 5609</td>
+                                            <td class="code-col"><?=$items['id']?></td>
                                             <td class="price-col">
                                                 <div class="product-price-container">
-                                                    <span class="product-old-price">$1500.00</span>
-                                                    <span class="product-price">$1200.00</span>
+                                                    <!--  <span class="product-old-price">$1500.00</span>-->
+                                                    <span class="product-price">S/ <?=$this->cart->format_number($items['price']); ?></span>
                                                 </div><!-- End .product-price-container -->
                                             </td>
                                             <td class="quantity-col">
-                                                <input type="text" class="form-control" value="2">
+                                                <input type="text" class="form-control" value="<?=$items['qty']?>">
                                             </td>
-                                            <td class="subtotal-col">$2400</td>
-                                            <td class="delete-col"><a href="#" class="icon delete-btn lighter"></a></td>
+                                            <td class="subtotal-col">S/ <?=$this->cart->format_number($items['subtotal']); ?></td>
+                                            <td class="delete-col"><a href="<?=site_url('/carrito/eliminar/'.$items['rowid'])?>" class="icon delete-btn lighter"></a></td>
                                         </tr>
 
-                                        <tr>
-                                            <td class="product-col">
-                                                <div class="product">
-                                                    <div class="product-top">
-                                                        <figure>
-                                                            <a href="#">
-                                                                <img src="assets/images/products/product2.jpg" alt="Product Image">
-                                                            </a>
-                                                        </figure>
-                                                    </div><!-- End .product-top -->
+                                   <?php }?>
 
-                                                    <div class="product-content-wrapper">
-                                                        <h3 class="product-title">
-                                                            <a href="#">Mustard yellow ruffle <br>dress</a>
-                                                        </h3>
-                                                        <ul>
-                                                            <li><span>Color:</span> White</li>
-                                                            <li><span>Size:</span> M</li>
-                                                        </ul>
-                                                    </div><!-- End .product-content-wrapper -->
-                                                </div><!-- End .product -->
-                                            </td>
-                                            <td class="code-col">573 347 5476</td>
-                                            <td class="price-col">
-                                                <div class="product-price-container">
-                                                    <span class="product-price">$760.00</span>
-                                                </div><!-- End .product-price-container -->
-                                            </td>
-                                            <td class="quantity-col">
-                                                <input type="text" class="form-control" value="1">
-                                            </td>
-                                            <td class="subtotal-col">$760.00</td>
-                                            <td class="delete-col"><a href="#" class="icon delete-btn lighter"></a></td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="product-col">
-                                                <div class="product">
-                                                    <div class="product-top">
-                                                        <figure>
-                                                            <a href="#">
-                                                                <img src="assets/images/products/product3.jpg" alt="Product Image">
-                                                            </a>
-                                                        </figure>
-                                                    </div><!-- End .product-top -->
-
-                                                    <div class="product-content-wrapper">
-                                                        <h3 class="product-title">
-                                                            <a href="#">Mustard yellow ruffle <br>dress</a>
-                                                        </h3>
-                                                        <ul>
-                                                            <li><span>Color:</span> Green</li>
-                                                            <li><span>Size:</span> XS</li>
-                                                        </ul>
-                                                    </div><!-- End .product-content-wrapper -->
-                                                </div><!-- End .product -->
-                                            </td>
-                                            <td class="code-col">147 337 2178</td>
-                                            <td class="price-col">
-                                                <div class="product-price-container">
-                                                    <span class="product-price">$180.00</span>
-                                                </div><!-- End .product-price-container -->
-                                            </td>
-                                            <td class="quantity-col">
-                                                <input type="text" class="form-control" value="1">
-                                            </td>
-                                            <td class="subtotal-col">$180.00</td>
-                                            <td class="delete-col"><a href="#" class="icon delete-btn lighter"></a></td>
-                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                             </div><!-- End .table-responsive -->
-
+						<?php if(!empty($lista_cart)){?>
                             <div class="row">
                                 <div class="col-xs-12 col-lg-8">
-                                    <div class="vertical-tab-container" role="tabpanel">
-                                        <!-- Nav tabs -->
-                                        <ul class="nav nav-tabs text-uppercase" role="tablist">
-                                            <li role="presentation" class="active">
-                                                <a href="#tab-tax" aria-controls="tab-tax" role="tab" data-toggle="tab">
-                                                    Estimate shipping &amp; Taxes
-                                                </a>
-                                            </li>
-
-                                            <li role="presentation">
-                                                <a href="#tab-discount" aria-controls="tab-discount" role="tab" data-toggle="tab">
-                                                    discount code 
-                                                </a>
-                                            </li>
-
-                                            <li role="presentation">
-                                                <a href="#tab-gift" aria-controls="tab-gift" role="tab" data-toggle="tab">
-                                                    gift voucher
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <!-- Tab Panes -->
-                                        <div class="tab-content">
-                                            <div role="tabpanel" class="tab-pane active" id="tab-tax">
-                                                <p>Enter your destination to get a shipping estimate</p>
-                                                <div class="form-group">
-                                                    <label>Country<span class="text-custom">*</span></label>
-                                                    <select class="custom-select form-control">
-                                                        <option>-- please select</option>
-                                                        <option>Normal Select 2</option>
-                                                        <option>Normal Select 3</option>
-                                                        <option>Normal Select 4</option>
-                                                        <option>Normal Select 5</option>
-                                                    </select>
-                                                </div><!-- end .form-group -->
-                                                <div class="form-group">
-                                                    <label>Region/State<span class="text-custom">*</span></label>
-                                                    <select class="custom-select form-control">
-                                                        <option>-- please select</option>
-                                                        <option>Normal Select 2</option>
-                                                        <option>Normal Select 3</option>
-                                                        <option>Normal Select 4</option>
-                                                        <option>Normal Select 5</option>
-                                                    </select>
-                                                </div><!-- end .form-group -->
-                                                <div class="form-group">
-                                                    <label>Post Code<span class="text-custom">*</span></label>
-                                                    <input type="text" class="form-control with-btn" placeholder="12345">
-                                                    <a href="#" class="btn btn-border btn-gray2">Get Quote</a>
-                                                </div><!-- end .form-group -->
-                                            </div><!-- End .tab-pane -->
-
-                                            <div role="tabpanel" class="tab-pane" id="tab-discount">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil necessitatibus, nisi consequuntur, quis, numquam et recusandae, quasi nulla aliquam animi magnam. Earum cumque quos veritatis quas assumenda, provident dolorum itaque!</p>
-                                            </div><!-- End .tab-pane -->
-
-                                            <div role="tabpanel" class="tab-pane" id="tab-gift">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore enim dolore velit doloremque saepe officia, mollitia natus ullam ratione debitis placeat ex laborum quia aliquid culpa illo temporibus dicta officiis.</p>
-                                            </div><!-- End .tab-pane -->
-                                        </div><!-- End .tab-content -->
-                                    </div><!-- end role[tabpanel] -->
+                                    
 
                                     <a href="#" class="btn btn-custom min-width">Continue Shopping</a>
                                 </div><!-- End .col-lg-8-->
@@ -202,28 +78,23 @@
                                             <tbody>
                                                 <tr>
                                                     <td>SUBTOTAL:</td>
-                                                    <td>$737.00</td>
+                                                    <td>S/ <?=$this->cart->format_number($this->cart->total())?></td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Shipping:</td>
-                                                    <td>$6.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Tax (5%):</td>
-                                                    <td>$37.00</td>
-                                                </tr>
+                                                
                                                 <tr>
                                                     <td>Total</td>
-                                                    <td>$780.00</td>
+                                                    <td>S/ <?=$this->cart->format_number($this->cart->total())?></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                     <div class="text-right">
-                                        <a href="#" class="btn btn-custom min-width">Checkout</a>
+                                        <a href="<?=site_url('/carrito/checkout')?>" class="btn btn-custom min-width">Checkout</a>
                                     </div>
                                 </div><!-- End .col-lg-4 -->
                             </div><!-- End .row -->
+                            
+                            <? } ?>
 
                             <div class="mb130 mb100-sm mb80-xs"></div><!-- mrgin -->
 
@@ -558,46 +429,7 @@
                                 </div><!-- end .swiper-container -->
                             </div><!-- End .widget -->
 
-                            <div class="widget">
-                                <h3 class="widget-title">Testimonials</h3>
-                                <div class="widget-body">
-                                    <div class="swiper-container testimonials-slider">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide testimonial">
-                                                <blockquote>
-                                                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posu ere cubilia curae. Quisque sceler isque mollis nisl vel volutpat. Aenean vitae eros magna. Henean eleifend ligula at lacus. Mauris magna lectus, porta eget faucibus in, suscipit sed nunc. Cras feugiat diam a tortor.</p>
-                                                </blockquote>
-                                                <div class="testimonial-owner">
-                                                    <figure>
-                                                        <img src="assets/images/blog/users/mark.png" alt="Mark">
-                                                    </figure>
-                                                    <div class="owner-meta">
-                                                        Mark Lewis,<br>
-                                                        06.04.2016
-                                                    </div>
-                                                </div><!-- End .testimonial-owner -->
-                                            </div><!-- End .testimonial -->
-                                            <div class="swiper-slide testimonial">
-                                                <blockquote>
-                                                    <p>hasellus pharetra pretium sapien dignissim eleifend. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit minima inventore eveniet, quam repellendus. Quidem unde, est nemo ducimus. Amet molestias sed aspernatur quo, molestiae deleniti cumque itaque praesentium consectetur!</p>
-                                                </blockquote>
-                                                <div class="testimonial-owner">
-                                                    <figure>
-                                                        <img src="assets/images/blog/users/grace.png" alt="Grace">
-                                                    </figure>
-                                                    <div class="owner-meta">
-                                                        Grace Lewis,<br>
-                                                        03.04.2016
-                                                    </div>
-                                                </div><!-- End .testimonial-owner -->
-                                            </div><!-- End .testimonial -->
-                                        </div><!-- End .swiper-wrapper -->
-
-                                        <div class="swiper-button-next icon"></div>
-                                        <div class="swiper-button-prev icon"></div>
-                                    </div><!-- end .swiper-container -->
-                                </div><!-- End .widget-body -->
-                            </div><!-- End .widget -->
+                           
 
                             <div class="widget">
                                 <h3 class="widget-title">Latest Deals</h3>

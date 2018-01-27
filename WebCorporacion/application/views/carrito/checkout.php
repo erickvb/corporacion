@@ -14,13 +14,13 @@
                         <ol class="breadcrumb">
                             <li><a href="<?=site_url()?>">Inicio</a></li>
                            
-                             <li class="active">Carrito de compras</li>
+                             <li class="active">Checkout</li>
                         </ol>
                     </div><!-- End .container-fluid -->
                 </div><!-- End .page-header -->
 				
                 
-                <? $this->load->view("carrito/carrito_lista");?>
+                <? $this->load->view("carrito/checkout_detalle");?>
                 
             </div><!-- End .main -->
 

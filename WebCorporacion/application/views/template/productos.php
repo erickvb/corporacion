@@ -107,7 +107,7 @@
                                                         </div><!-- End .product-colors -->
 
                                                         <div class="product-action">
-                                                            <a href="#" class="btn-add-cart" title="Add to Cart"><i class="icon icon-cart"></i> <span>Add To Cart</span></a>
+                                                            <a href="#" class="btn-add-cart" title="Add to Cart"  id-item="<?=$producto->m_product_id?>"><i class="icon icon-cart"></i> <span>Agregar a carrito</span></a>
                                                             <a href="#" class="icon btn-product-like" title="Like"><span class="sr-only">Like</span></a>
                                                             <a href="#" class="icon btn-product-compare" title="Compare"><span class="sr-only">Compare</span></a>
                                                         </div><!-- End .product-action -->
