@@ -41,6 +41,17 @@ $(document).ready(function(){
     	
     });
     
+    $('body').on('click','.delete-btn',function(){
+    	var id = $(this).attr('id-item');
+    	console.log("id click :"+id);
+    	
+    });
+    
+    $('.text-cantidad-cart').click(function(){
+    	var id = $(this).attr('id-item');
+    	console.log("id click :"+id);
+    })
+    
     listarItems();
 });
 function addItemCarrito(id, cantidad){
@@ -56,7 +67,8 @@ function addItemCarrito(id, cantidad){
 }
 
 function listarItems(){
-	
+	$('#show-menu-cart').hide();
+	 $("#menu-resumen-carrito").html("");
 	var source   = $("#cart-resumen").html();
 	var template = Handlebars.compile(source);
 	$.ajax({
@@ -74,9 +86,24 @@ function listarItems(){
 				  total+= value.subtotal;
 				  count+= value.qty;
 				});
-			  
-			  $("#total-cart").html(' '+count+' item(s) in tu cartito - <span class="text-custom">S/ '+total+'</span>');
+			  if(total> 0){
+				  $('#show-menu-cart').show();
+				  $("#total-cart").html(' '+count+' item(s) in tu cartito - <span class="text-custom">S/'+total+'</span>');
+				  $("#menu-total-cart").html("S/"+total);
+				  $('.dcart-total-count').html(count);
+			  }else{
+				  $('.dcart-total-count').html('')
+			  }
+			 
 			 
 		  }
 		})
+}
+
+function deleteItemCarrito(){
+	
+	
+}
+function updateItemCarrito(){
+	
 }

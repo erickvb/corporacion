@@ -170,7 +170,7 @@
                                                     </table>
                                                 </div><!-- End .table-responsive -->
                                                 <div class="text-right">
-                                                    <input type="submit" class="btn btn-custom min-width-md" value="Confirmar Order" name="grabar"/>
+                                                    <input type="submit" class="btn btn-custom min-width-md" value="Confirmar Orden" name="grabar"/>
                                                 </div>
                                             </div><!-- End .panel-body -->
                                         </div><!-- End .panel-collapse -->

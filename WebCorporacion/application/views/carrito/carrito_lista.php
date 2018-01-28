@@ -50,7 +50,7 @@
                                                 </div><!-- End .product-price-container -->
                                             </td>
                                             <td class="quantity-col">
-                                                <input type="text" class="form-control" value="<?=$items['qty']?>">
+                                                <input type="text" class="form-control text-cantidad-cart" value="<?=$items['qty']?>" id-item="<?=$items['id']?>"/>
                                             </td>
                                             <td class="subtotal-col">S/ <?=$this->cart->format_number($items['subtotal']); ?></td>
                                             <td class="delete-col"><a href="<?=site_url('/carrito/eliminar/'.$items['rowid'])?>" class="icon delete-btn lighter"></a></td>
@@ -67,7 +67,7 @@
                                 <div class="col-xs-12 col-lg-8">
                                     
 
-                                    <a href="#" class="btn btn-custom min-width">Continue Shopping</a>
+                                    <a href="<?=site_url('/producto')?>" class="btn btn-custom min-width">Continar comprando</a>
                                 </div><!-- End .col-lg-8-->
 
                                 <div class="mb50 clearfix hidden-lg"></div><!-- margin -->
@@ -78,12 +78,12 @@
                                             <tbody>
                                                 <tr>
                                                     <td>SUBTOTAL:</td>
-                                                    <td>S/ <?=$this->cart->format_number($this->cart->total())?></td>
+                                                    <td>S/<?=$this->cart->format_number($this->cart->total())?></td>
                                                 </tr>
                                                 
                                                 <tr>
                                                     <td>Total</td>
-                                                    <td>S/ <?=$this->cart->format_number($this->cart->total())?></td>
+                                                    <td>S/<?=$this->cart->format_number($this->cart->total())?></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -428,121 +428,7 @@
                                     <div class="swiper-button-prev icon"></div>
                                 </div><!-- end .swiper-container -->
                             </div><!-- End .widget -->
-
-                           
-
-                            <div class="widget">
-                                <h3 class="widget-title">Latest Deals</h3>
-                                <div class="widget-body">
-                                    <div class="swiper-container product-deals-slider">
-                                        <div class="swiper-wrapper">
-
-                                            <div class="swiper-slide">
-                                                <div class="product">
-                                                    <div class="product-top">
-                                                        <figure>
-                                                            <a href="#">
-                                                                <img src="assets/images/products/product2.jpg" alt="Product Image">
-                                                            </a>
-                                                        </figure>
-                                                        <a href="#" class="btn-quickview icon" title="View"><span class="sr-only">View</span></a>
-
-                                                        <div class="product-countdown"></div><!-- End .product-countdown -->
-                                                    </div><!-- End .product-top -->
-                                                    <div class="product-meta">
-                                                        <div class="product-brand">
-                                                            <a href="#">Mediapad</a>
-                                                        </div><!-- End .product-brand -->
-                                                        <div class="ratings-container">
-                                                            <div class="ratings" style="width: 80%;"></div><!-- End .ratings -->
-                                                        </div><!-- End .ratings -->
-                                                    </div><!-- End .product-meta -->
-
-                                                    <h3 class="product-title">
-                                                        <a href="#">Galaxy Note Pro 4G LTE Tablet <br>Titan Gray 7-Inch 16GB </a>
-                                                    </h3>
-
-                                                    <div class="product-price-container">
-                                                        <span class="product-old-price">$600.00</span>
-                                                        <span class="product-price">$450.00</span>
-                                                    </div><!-- End .product-price-container -->
-
-                                                    <div class="product-colors">
-                                                        <span style="background-color: #dfe0e2;"></span>
-                                                        <span style="background-color: #aac4cc;"></span>
-                                                        <span style="background-color: #c2a364;"></span>
-                                                    </div><!-- End .product-colors -->
-
-                                                    <div class="product-action">
-                                                        <a href="#" class="btn-add-cart" title="Add to Cart"><i class="icon icon-cart"></i> <span>Add To Cart</span></a>
-                                                    </div><!-- End .product-action -->
-                                                </div><!-- End .product -->
-                                            </div><!-- End .swiper-slide -->
-
-                                            <div class="swiper-slide">
-                                                <div class="product">
-                                                    <span class="product-label discount">-20%</span>
-                                                    <div class="product-top">
-                                                        <figure>
-                                                            <a href="#">
-                                                                <img src="assets/images/products/product17.jpg" alt="Product Image">
-                                                            </a>
-                                                        </figure>
-                                                        <a href="#" class="btn-quickview icon" title="View"><span class="sr-only">View</span></a>
-
-                                                        <div class="product-countdown"></div><!-- End .product-countdown -->
-                                                    </div><!-- End .product-top -->
-                                                    <div class="product-meta">
-                                                        <div class="product-brand">
-                                                            <a href="#">Samsung</a>
-                                                        </div><!-- End .product-brand -->
-                                                        <div class="ratings-container">
-                                                            <div class="ratings" style="width: 80%;"></div><!-- End .ratings -->
-                                                        </div><!-- End .ratings -->
-                                                    </div><!-- End .product-meta -->
-
-                                                    <h3 class="product-title">
-                                                        <a href="#">Cyber Shot Waterproof Black <br>Digital Camera</a>
-                                                    </h3>
-
-                                                    <div class="product-price-container">
-                                                        <span class="product-old-price">$480.00</span>
-                                                        <span class="product-price">$420.00</span>
-                                                    </div><!-- End .product-price-container -->
-
-                                                    <div class="product-action">
-                                                        <a href="#" class="btn-add-cart" title="Add to Cart"><i class="icon icon-cart"></i> <span>Add To Cart</span></a>
-                                                    </div><!-- End .product-action -->
-                                                </div><!-- End .product -->
-                                            </div><!-- End .swiper-slide -->
-
-                                        </div><!-- End .swiper-wrapper -->
-
-                                        <div class="swiper-button-next icon"></div>
-                                        <div class="swiper-button-prev icon"></div>
-                                    </div><!-- end .swiper-container -->
-                                </div><!-- End .widget-body -->
-                            </div><!-- End .widget -->
-
-                            <div class="widget">
-                                <div id="banner-widget-slider" class="carousel slide" data-ride="carousel" data-interval="10000">
-                                    <!-- Indicators -->
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#banner-widget-slider" data-slide-to="0" class="active"></li>
-                                        <li data-target="#banner-widget-slider" data-slide-to="1"></li>
-                                    </ol>
-
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                            <img src="assets/images/banners/sidebar/banner1.jpg" alt="Banner 1">
-                                        </div><!-- End .item -->
-
-                                        <div class="item">
-                                            <img src="assets/images/banners/sidebar/banner2.jpg" alt="Banner 2">
-                                        </div><!-- End .item -->
-                                    </div><!-- End .carousel-inner -->
-                                </div><!-- End .carousel -->
-                            </div><!-- End .widget -->
+                            
                         </aside>
                     </div><!-- End .row -->
                 </div>

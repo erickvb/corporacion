@@ -179,10 +179,10 @@
 						<div class="dropdown header-dropdown cart-dropdown">
 							<a href="#" data-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false"> <i class="icon icon-header icon-cart"></i>
-								<span class="dcart-total-count">2</span>
+								<span class="dcart-total-count"></span>
 							</a>
 
-							<div class="dropdown-menu">
+							<div class="dropdown-menu" id="show-menu-cart">
 								<p id="total-cart">
 								
 								</p>
@@ -192,21 +192,16 @@
 
 								<div class="dcart-action-container">
 									<div class="dcart-action-info">
+										
 										<p>
-											Shipping: <span class="text-custom">$7.00</span>
-										</p>
-										<p>
-											Tax: <span>Free</span>
-										</p>
-										<p>
-											Total: <span class="text-custom">$665.00</span>
+											Total: <span class="text-custom" id="menu-total-cart"></span>
 										</p>
 									</div>
 									<!-- End .dcart-action-info -->
 
 									<div class="dcart-action">
-										<a href="<?=site_url('carrito/lista')?>" class="btn btn-custom4 btn-sm">View Cart</a> <a
-											href="#" class="btn btn-custom btn-sm">Checkout</a>
+										<a href="<?=site_url('carrito/lista')?>" class="btn btn-custom4 btn-sm">Ver carrito</a> 
+										<a href="<?=site_url('/carrito/checkout')?>" class="btn btn-custom btn-sm">Checkout</a>
 									</div>
 									<!-- End .dcart-action -->
 									
@@ -260,8 +255,9 @@
 <script id="cart-resumen" type="text/x-handlebars-template">
 <div class="product product-sm">
 										<figure>
-											<a href="#"> <img
-												src="assets/images/products/thumbs/product1.jpg"
+											<a href="#"> 
+                                               <img 
+												src="{{options.imagen}}"
 												alt="Product">
 											</a>
 										</figure>
@@ -270,12 +266,12 @@
 												<a href="#">{{name}}</a>
 											</h5>
 											<div class="product-price-container">
-												<span class="product-price">{{money}}{{subtotal}}</span>
+												<span class="product-price">S/{{subtotal}}</span>
 											</div>
 											<!-- End .product-price-container -->
 										</div>
 										<!-- End .product-meta -->
-										<a href="#" class="icon delete-btn lighter"
-											title="Delete Product"><span class="sr-only">Delete product</span></a>
+										<a href="javascript:;" class="icon delete-btn lighter"
+											title="Delete Product" id-item="{{id}}"><span class="sr-only">Delete product</span></a>
 									</div>
 </script>
