@@ -11,6 +11,7 @@
  	  
  	  <div class="main">
  	  	
+		<? $this->load->view("pagina/body_contactenos");?>
  	  </div><!-- End .main -->
  	<? $this->load->view("layout/footer");?>
  	</div><!-- End #wrapper -->
