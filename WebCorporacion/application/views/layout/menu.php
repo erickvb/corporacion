@@ -4,16 +4,16 @@
 			<div class="header-top-text">Now shipping to Canada.</div>
 			<!-- End .header-top-text -->
 			<ul class="top-dropdowns">
-				<li><a href="#"> <span>My Support</span>
+				<li><a href="#"> <span>Registrese</span>
 				</a></li>
-				<li class="hidden-xs"><a href="#"> <span>My Favorites</span>
+				<li class="hidden-xs"><a href="#"> <span>Mi cuenta</span>
 				</a></li>
-				<li class="hidden-xs"><a href="#"> <span>Checkout</span>
+				<li class="hidden-xs"><a href="#"> <span>Mis favoritos</span>
 				</a></li>
 
-				<li class="hidden-xs"><a href="#"> <span>MY Wishlist</span>
+				<li class="hidden-xs"><a href="#"> <span>Mi carrito</span>
 				</a></li>
-				<li><a href="#"> <i class="icon top-icon top-icon-creditcard"></i> <span>Currency</span>
+				<li><a href="#"> <i class="icon top-icon top-icon-creditcard"></i> <span>Pedido</span>
 				</a>
 					<ul>
 						<li><a href="#">Us Dollar</a></li>
@@ -21,7 +21,7 @@
 						<li><a href="#">Pound St</a></li>
 						<li><a href="#">Yuan</a></li>
 					</ul></li>
-				<li><a href="#"> <i class="icon top-icon top-icon-flag"></i> <span>Language</span>
+				<li><a href="#"> <i class="icon top-icon top-icon-flag"></i> <span>Idioma</span>
 				</a>
 					<ul>
 						<li><a href="#"> <img src="assets/images/flags/england.jpg"
@@ -51,7 +51,7 @@
 		<div class="container-fluid">
 			<div class="logo">
 				<a href="index.html" title="Sconto - Premium eCommerce Template"> <img
-					src="assets/images/logo-index5.png" alt="Sconto">
+					src="<?=base_url()?>public/assets/images/logo-index5.png" alt="Sconto">
 				</a>
 			</div>
 			<!-- End .logo -->
