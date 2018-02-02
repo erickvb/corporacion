@@ -199,18 +199,24 @@ Escuchamos e intentamos responderles siempre.</p>
                             <h2>Our Skills.</h2>
                             <p>Mauris rhoncus lacinia libero, in ultricies ante porta ut. Pellentesque hendrerit felis odio. Donec sollicitudin libero sit amet lectus aliquet venenatis. Integer consequat, dolor id luctus convallis, nibh risus. Cras enim nulla, luctus sit amet aliquet et, mattis sed diam. Nulla vel ex tincidunt justo gravida tempor sed sit amet lectus. Pellentesque porttitor eros.</p>
 
+                            <h2>Destacamos por</h2>
+                            <p>Contar más de 10,000 productos en stock, relación comercial con muchas marcas de prestigio, y con 3 locales estratégicamente ubicadas, en la Capital.</p>
+                            <h3>Marcas de todos los continentes</h3>
                             <div class="progress-bars-container">
                                 <div class="progress-container">
                                     <h4 class="progress-title">Wordpress</h4>
+                                    <h4 class="progress-title">Americanas</h4>
                                     <div class="progress">
                                         <div class="progress-bar progress-animate" role="progressbar" data-width="70" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                                             <span class="progress-val">70%</span>
+                                        <div class="progress-bar progress-animate" role="progressbar" data-width="90" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                            <span class="progress-val">90%</span>
                                         </div><!-- End .progress-bar -->
                                     </div><!-- End .progress -->
                                 </div><!-- End .progress-container -->
 
                                 <div class="progress-container">
-                                    <h4 class="progress-title">photoshop</h4>
+                                    <h4 class="progress-title">Europeas</h4>
                                     <div class="progress">
                                         <div class="progress-bar progress-animate" role="progressbar" data-width="65" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
                                             <span class="progress-val">65%</span>
@@ -219,7 +225,7 @@ Escuchamos e intentamos responderles siempre.</p>
                                 </div><!-- End .progress-container -->
 
                                 <div class="progress-container">
-                                    <h4 class="progress-title">HTML/CSS</h4>
+                                    <h4 class="progress-title">Asiaticas</h4>
                                     <div class="progress">
                                         <div class="progress-bar progress-animate" role="progressbar" data-width="60" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
                                             <span class="progress-val">60%</span>
@@ -228,7 +234,7 @@ Escuchamos e intentamos responderles siempre.</p>
                                 </div><!-- End .progress-container -->
 
                                 <div class="progress-container">
-                                    <h4 class="progress-title">Illustrator</h4>
+                                    <h4 class="progress-title">Nacionales</h4>
                                     <div class="progress">
                                         <div class="progress-bar progress-animate" role="progressbar" data-width="65" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
                                             <span class="progress-val">65%</span>
@@ -246,9 +252,10 @@ Escuchamos e intentamos responderles siempre.</p>
                     <div id="socials-feed-slider" class="carousel slide" data-ride="carousel" data-interval="7000">
                         <div class="carousel-inner">
                             <div class="item active container-fluid" style='background-image: url(<?=base_url()?>public/assets/images/socials/twitterbg.jpg)'>
-                                <img src="assets/images/socials/twitter.png" alt="twitter" class="social-show-icon">
+                                
+                                <img src="<?=base_url()?>public/assets/images/socials/twitter.png" alt="twitter" class="social-show-icon">
 
-                                <h2>LATEST TWEETS</h2>
+                                <h2>Ultimos Tweets</h2>
 
                                 <div class="socials-twitter-container">
                                     <div class="swiper-container socials-twitter-slider">
@@ -278,7 +285,7 @@ Escuchamos e intentamos responderles siempre.</p>
 
                             </div><!-- End .item -->
 
-                            <div class="item container-fluid" style='background-image: url(<?=base_url()?>public/assets/images/socials/facebookbg.jpg)'>
+                            <div class="item container-fluid" style='background-image: url(<?=base_url()?>public/assets/images/socials/twitterbg.jpg)'>
                                 <img src="<?=base_url()?>public/assets/images/socials/facebook.png" alt="facebook" class="social-show-icon">
 
                                 <h2>OUR FANS</h2>
@@ -329,7 +336,7 @@ Escuchamos e intentamos responderles siempre.</p>
                                 </div><!-- End .socials-facebook-container -->
                             </div><!-- End .item -->
 
-                            <div class="item container-fluid" style='background-image: url(<?=base_url()?>public/assets/images/socials/youtubebg.jpg)'>
+                            <div class="item container-fluid" style='background-image: url(<?=base_url()?>public/assets/images/socials/twitterbg.jpg)'>
                                 <img src="<?=base_url()?>public/assets/images/socials/youtube.png" alt="youtube" class="social-show-icon">
 
                                 <h2>LATEST VIDEO</h2>
@@ -355,183 +362,7 @@ Escuchamos e intentamos responderles siempre.</p>
                     </div><!-- End .carousel -->
                 </div><!-- End .socials-section -->
 
-                <div class="container-fluid">
-                    <h2 class="carousel-title text-center">FROM THE BLOG</h2>
-                    <div class="swiper-container fromtheblog-carousel">
-                        <!-- Add Navigation -->
-                        <div class="swiper-nav-wrapper">
-                            <div class="swiper-button-prev icon"></div><!-- End .button-prev -->
-                            <div class="swiper-button-next icon"></div><!-- End .button-next -->
-                        </div><!-- End .swiper-nav-wrapper -->
-
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <article class="entry entry-grid">
-                                    <figure class="entry-media">
-                                        <a href="single.html">
-                                            <img src="<?=base_url()?>public/assets/images/blog/about/post1.jpg" alt="Entry">
-                                        </a>
-                                    </figure>
-                                    <div class="entry-content-wrapper">
-                                        <span class="entry-date">30 November</span>
-                                        <h2 class="entry-title">
-                                            <a href="single.html">Praesent vitae nisl viverra</a>
-                                        </h2>
-                                        <div class="entry-content">
-                                            <p>Sed urna diam, scelerisque a ultricies in, dignissim luctus orci. Ut interdum ex, ut tempor felis dictum sed. Nullam <em class="text-custom5">a faucibus nunc.</em> Ut ut lacus eu nulla venenatis ultrices condimentum porta est. Pellentesque laoreet gravida lectus non molestie. Vivamus porta nulla elementum</p>
-                                        </div><!-- End .entry-content -->
-
-                                        <div class="entry-meta-container">
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-comments"></i>
-                                                <a href="#">2 comments</a>
-                                            </span>
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-type"></i>
-                                                <a href="#">image</a>
-                                            </span>
-
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-heart"></i>
-                                                <a href="#">25</a>
-                                            </span>
-
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-view"></i>
-                                                <span>1254</span>
-                                            </span>
-                                        </div><!-- End .entry-meta-container -->
-                                    </div><!-- end .entry-content-wrapper -->
-                                </article>
-                            </div><!-- End .swiper-slide -->
-
-                            <div class="swiper-slide">
-                                <article class="entry entry-grid">
-                                    <figure class="entry-media">
-                                        <a href="single.html">
-                                            <img src="<?=base_url()?>public/assets/images/blog/about/post2.jpg" alt="Entry">
-                                        </a>
-                                    </figure>
-                                    <div class="entry-content-wrapper">
-                                        <span class="entry-date">14 January</span>
-                                        <h2 class="entry-title">
-                                            <a href="single.html">nec risus quis celerisque</a>
-                                        </h2>
-                                        <div class="entry-content">
-                                            <p>Duis nunc purus, laoreet id dignissim et, vehicula eget arcu. Vestibulum velit nisi, dapibus ut justo vitae, tempus dapibus felis. Fusce vel dapibus magna, at lacinia dolor. Aliquam laoreet mi non orci egestas, nec consectetur lorem volutpat. In maximus auctor erat in euismoda.</p>
-                                        </div><!-- End .entry-content -->
-
-                                        <div class="entry-meta-container">
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-comments"></i>
-                                                <a href="#">2 comments</a>
-                                            </span>
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-type"></i>
-                                                <a href="#">image</a>
-                                            </span>
-
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-heart"></i>
-                                                <a href="#">25</a>
-                                            </span>
-
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-view"></i>
-                                                <span>1254</span>
-                                            </span>
-                                        </div><!-- End .entry-meta-container -->
-                                    </div><!-- end .entry-content-wrapper -->
-                                </article>
-                            </div><!-- End .swiper-slide -->
-
-                            <div class="swiper-slide">
-                                <article class="entry entry-grid">
-                                    <figure class="entry-media">
-                                        <a href="single.html">
-                                            <img src="<?=base_url()?>public/assets/images/blog/about/post3.jpg" alt="Entry">
-                                        </a>
-                                    </figure>
-                                    <div class="entry-content-wrapper">
-                                        <span class="entry-date">11 January</span>
-                                        <h2 class="entry-title">
-                                            <a href="single.html">pharetra quam lorem</a>
-                                        </h2>
-                                        <div class="entry-content">
-                                            <p>Vitae consequat quis, dignissim nec quam. Cras elementum consectetur turpis eget tincidunt. Vivamus felis sem, feugiat non mi sit amet, aliquam suscipit Quisque eget accumsan eros. Nulla id nulla varius, varius odio cursus, enim vehicula arcu. Vivamus sodales massa idulla.</p>
-                                        </div><!-- End .entry-content -->
-
-                                        <div class="entry-meta-container">
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-comments"></i>
-                                                <a href="#">2 comments</a>
-                                            </span>
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-type"></i>
-                                                <a href="#">image</a>
-                                            </span>
-
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-heart"></i>
-                                                <a href="#">25</a>
-                                            </span>
-
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-view"></i>
-                                                <span>1254</span>
-                                            </span>
-                                        </div><!-- End .entry-meta-container -->
-                                    </div><!-- end .entry-content-wrapper -->
-                                </article>
-                            </div><!-- End .swiper-slide -->
-
-                            <div class="swiper-slide">
-                                <article class="entry entry-grid">
-                                    <figure class="entry-media">
-                                        <a href="single.html">
-                                            <img src="<?=base_url()?>public/assets/images/blog/about/post4.jpg" alt="Entry">
-                                        </a>
-                                    </figure>
-                                    <div class="entry-content-wrapper">
-                                        <span class="entry-date">24 December</span>
-                                        <h2 class="entry-title">
-                                            <a href="single.html">tempor felis dictum sed</a>
-                                        </h2>
-                                        <div class="entry-content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum expedita nemo dolore ipsa consequuntur, ipsum aliquid pariatur facere aut voluptate obcaecati, perferendis molestiae ea assumenda velit, quisquam doloribus ipsam cum. uam suscipit Quisque eget accumsan eroson.</p>
-                                        </div><!-- End .entry-content -->
-
-                                        <div class="entry-meta-container">
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-comments"></i>
-                                                <a href="#">2 comments</a>
-                                            </span>
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-type"></i>
-                                                <a href="#">image</a>
-                                            </span>
-
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-heart"></i>
-                                                <a href="#">25</a>
-                                            </span>
-
-                                            <span class="entry-meta">
-                                                <i class="icon icon-meta icon-meta-view"></i>
-                                                <span>1254</span>
-                                            </span>
-                                        </div><!-- End .entry-meta-container -->
-                                    </div><!-- end .entry-content-wrapper -->
-                                </article>
-                            </div><!-- End .swiper-slide -->
-
-                        </div><!-- End .swiper-wrapper -->
-                    </div><!-- End .swiper-container -->
-                </div><!-- End .container-fluid -->
-
-                <div class="mb90 mb80-sm"></div><!-- margin -->
-
-                <div class="bg-custom6 pt90 pb100 pt75-sm pb75-sm pt65-xs pb70-xs">
+                           <div class="bg-custom6 pt90 pb100 pt75-sm pb75-sm pt65-xs pb70-xs">
                     <div class="container-fluid">
                         <h2 class="carousel-title text-white text-center">PRINCIPALES MARCAS</h2>
                         <div class="swiper-container partners-carousel">
@@ -601,7 +432,7 @@ Escuchamos e intentamos responderles siempre.</p>
                                 <div class="swiper-slide">
                                     <div class="partner">
                                         <a href="#" title="Partner Name">
-                                            <img src="<?=base_url()?>public/assets/images/partners/partner1.png" alt="Partner">
+                                            <img src="<?=base_url()?>public/assets/images/partners/partner8.png" alt="Partner">
                                         </a>
                                     </div><!-- End .partner -->
                                 </div><!-- End .swiper-slide -->
