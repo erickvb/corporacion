@@ -114,12 +114,15 @@
                         <p>Entregar a nuestros clientes más que simplemente partes para sus artefactos, nuestra misión es dar soluciones al hogar, el comercio y la industria. Buscamos la satisfacción total de nuestros clientes.</p>
                         <p>Visi&oacute;n: Ser la empresa líder en soluciones para artefactos del hogar. Nuestros pilares son la innovación tecnológica, el servicio al cliente y el trabajo eficaz. Ser así la mejor alternativa en el mercado, y cubrir cada una de las necesidades del hogar, el comercio y la industria. </p>
                         <cite>Christine Peterson, SEO</cite>
+                        
+                        <cite>Ing. JOhn Sanchez, Gerencia</cite>
                     </blockquote>
                 </div><!-- End .container-fluid -->
 
                 <div class="story-section">
                     <div class="story-video-col video-gallery" style='background-image: url(<?=base_url()?>public/assets/images/videobg.jpg)'>
                            <a href="http://www.youtube.com/watch?v=N_2OmTZ08L0" class="icon video-btn"></a>
+                           <a href="https://www.youtube.com/watch?v=rtBvlcE5tBw" class="icon video-btn"></a>
                     </div><!-- End .story-video-col -->
 
                     <div class="story-content-col">
@@ -138,6 +141,10 @@
                         <div class="cell-content-wrapper">
                             <h2>Nuestros valores.</h2>
                             <p>Quisque id ex sapien. Nunc nec odio odio. Phasellus quis quam molestie, ultrices magna ut, euismod lacus. Vivamus posuere justo ut dolor consequat, non fringilla ex tempus. Fusce sit amet ligula risus. Pellentesque ac pretium lectus. Morbi id accumsan enim, sit amet dapibus velit. In lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                            <p><B>Nuestra gente. Nuestro mayor valor.</B></p>
+<p>Fomentamos su motivación e implicación. Creemos en su sentido de la responsabilidad, en su afán de superación y en su orgullo profesional. Les ayudamos en su formación y desarrollo personal, conciliando los objetivos de la empresa con los personales.</p>
+<p>Creamos un entorno cómodo para aprovechar el potencial de cada uno. Promovemos a los que, además de formación profesional, demuestran calidad humana, facilidad de comunicación y empatía. Ofrecemos una estructura que facilite el trabajo en equipo.
+Escuchamos e intentamos responderles siempre.</p>
                             
                             <div class="info-boxes-container">
                                 <div class="row">
