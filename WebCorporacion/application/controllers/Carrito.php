@@ -33,7 +33,7 @@ class Carrito extends CI_Controller{
             'qty'     => $cantidad,
             'price'   =>  $producto->menor,
             'name'    =>  $producto->name,
-            'options' => array('money' => $producto->moneda, 'imagen' =>base_url().'public/imagen/'. $producto->url_image)
+            'options' => array('money' => $producto->moneda, 'imagen' =>base_url().'public/imagenes/'. $producto->url_image)
             
         );
         $this->cart->insert($data);
