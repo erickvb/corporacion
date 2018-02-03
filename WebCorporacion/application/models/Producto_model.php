@@ -635,9 +635,9 @@ class Producto_model extends CI_Model {
 	
 	function agregaProducto($data,$cdt_idfb){
 	
-		$prods = $this->cuentaProducto( $data['m_product_id'] ,$cdt_idfb);
-	
-		if($prods==0){
+		/*$prods = $this->cuentaProducto( $data['m_product_id'] ,$cdt_idfb);
+	*/
+		/*if($prods==0){*/
 			$this->db->select_max('cdt_order_id');
 			$query = $this->db->get('cdt_order')->row_array();
 			$c_order_id = $query['cdt_order_id'];
@@ -650,7 +650,7 @@ class Producto_model extends CI_Model {
 					'cdt_order_id' => $c_order_id,
 					 
 					'm_product_id' => $data['m_product_id'],
-					'cdt_idfb' => $cdt_idfb,
+			         'cdt_idfb' => $this->db->escape_str($cdt_idfb),
 					//'price'=> $data['price'],
 					'pricelimit'=> $data['pricelimit'],
 					'pricestd'=> $data['pricestd'],
@@ -675,12 +675,18 @@ class Producto_model extends CI_Model {
 					'grandtotal' => 0,
 					'ad_client_id' => '1000004',
 					'processed' => 'N',
+			         'cdt_order_pedido_id'=> $data['id_orden_pedido']
 					 
 			);
 	
-			$this->db->insert('cdt_order', $data_insert);
+			$rs = $this->db->insert('cdt_order', $data_insert);
+			if($rs){
+			    return $c_order_id;
+			}else{
+			    return 0;
+			}
 	
-		}else{
+		/*}else{
 	
 			$dataupd = array(
 					'qty' => $data['qty'],
@@ -690,7 +696,7 @@ class Producto_model extends CI_Model {
 			$this->db->where('cdt_idfb', $cdt_idfb);
 			$this->db->update('cdt_order', $dataupd);
 	
-		}
+		}*/
 	
 	
 	}
@@ -706,14 +712,15 @@ class Producto_model extends CI_Model {
 		$this->db->update('cdt_order', $data);
 	}
 	
-	function processItemCart($cdt_order_id,$cdt_order_pedido_id, $formapago, $shipping){
+	function processItemCart($cdt_order_pedido_id){
 		$data = array(
-				'processed' => 'Y',
-				'cdt_formapago' => $formapago,
-				'isshipto' => $shipping
+				'processed' => 'Y'
+		    //,
+				//'cdt_formapago' => $formapago,
+				//'isshipto' => $shipping
 		);
 	
-		$this->db->where('cdt_order_id', $cdt_order_id);
+		//$this->db->where('cdt_order_id', $cdt_order_id);
 		$this->db->where('cdt_order_pedido_id', $cdt_order_pedido_id);
 		$this->db->where('processed', 'N');
 	
@@ -723,16 +730,18 @@ class Producto_model extends CI_Model {
 	function generaPedidoId($cdt_fbid){
 		$this->db->select('cdt_order_pedido_id');
 		$this->db->from('cdt_order');
-		$this->db->where('cdt_idfb', $cdt_fbid);
+		$this->db->where('cdt_idfb',$this->db->escape_str($cdt_fbid));
 		$this->db->where('processed', 'N');
 		$q = $this->db->get();
+		
 		$resQ = $q->result_array();
-	
+		$new_id = 0;
 		if(count($resQ)>0){
 			$max_id = $resQ[0]["cdt_order_pedido_id"];
 			if(is_numeric($max_id)){
 				$new_id = $max_id;
-			}else{
+			}
+		}else{
 				$this->db->select_max('cdt_order_pedido_id');
 				$res = $this->db->get('cdt_order');
 				$max_id = 0;
@@ -749,7 +758,7 @@ class Producto_model extends CI_Model {
 				$new_id = $max_id + 1;
 			}
 	
-			$data = array(
+	/*		$data = array(
 					'cdt_order_pedido_id' => $new_id
 			);
 	
@@ -760,9 +769,9 @@ class Producto_model extends CI_Model {
 	
 			if($this->db->affected_rows() <= 0){
 				$new_id = -1;
-			}
+			}*/
 	
-		}
+		
 	
 		return $new_id;
 	}

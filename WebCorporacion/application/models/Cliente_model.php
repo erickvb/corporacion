@@ -14,6 +14,7 @@ class Cliente_model extends CI_Model{
         $this->db->select_max('ad_user_id');
         $max = $this->db->get('ad_user')->row_array();
         
+        $id_generado = $max['ad_user_id']+1;
         
         $data = array(
             'ad_user_id'=>($max['ad_user_id']+1),
@@ -32,11 +33,11 @@ class Cliente_model extends CI_Model{
        $rs = $this->db->insert('ad_user', $data);
        if($rs){
            
-           return true;
+           return $id_generado;
        }else{
            $error = $this->db->error();
            
-           return false;
+           return 0;
        }
     }
     
