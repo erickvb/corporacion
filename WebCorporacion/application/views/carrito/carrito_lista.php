@@ -26,7 +26,7 @@
                                                     <!--     <span class="product-label discount">-25%</span> -->
                                                         <figure>
                                                             <a href="#">
-                                                                <img src="<?=$items['options']['imagen']?>" alt="Product Image">
+                                                                <img src="<?=$items['options']['imagen']?>" alt="<?=$items['name']?>">
                                                             </a>
                                                         </figure>
                                                     </div><!-- End .product-top -->
