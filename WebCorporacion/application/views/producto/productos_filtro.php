@@ -39,19 +39,19 @@
                             <div class="top-filter-container clearfix">
                                 <div class="filter-left clearfix">
 <!--                                     <a href="#" class="btn btn-gray btn-border">Compare</a> -->
-                                    <div class="page-sort-filter">
+                                   <!--  <div class="page-sort-filter">
                                         <select class="custom-select form-control">
                                             <option>Sort By: Default</option>
                                             <option>Sort By: Size</option>
                                             <option>Sort By: Sales</option>
                                             <option>Sort By: Popularity</option>
                                         </select>
-                                    </div><!-- End .page-sort-filter -->
+                                    </div>End .page-sort-filter -->
 
-                                    <div class="layout-btns-container ">
+                                  <!--  <div class="layout-btns-container ">
                                         <a href="#" class="icon layout-btn btn-list"></a>
                                         <a href="#" class="icon layout-btn btn-grid active"></a>
-                                    </div><!-- End .layout-btns-container -->
+                                    </div> End .layout-btns-container -->
                                     
                                 </div><!-- End .filter-left -->
                                 <nav class="filter-right pagination-container clearfix">
@@ -67,14 +67,14 @@
                                 <?php  foreach ($data_productos as $producto){?>
                                     <div class="product-column">
                                         <div class="product product1">
-                                            <span class="product-label discount">-25%</span>
+                                           <!--  <span class="product-label discount">-25%</span> -->
                                             <div class="product-top">
                                                 <figure>
                                                     <a href="<?=site_url('producto/detalle/'.$producto->m_product_id.'')?>">
                                                         <img src="<?=$producto->url_image?>" alt="<?=$producto->name?>">
                                                     </a>
                                                 </figure>
-                                                <a href="#" class="btn-quickview icon" title="View"><span class="sr-only">View</span></a>
+                                                <a href="<?=site_url('producto/detalle/'.$producto->m_product_id.'')?>" class="btn-quickview icon" title="View"><span class="sr-only">Ver</span></a>
                                             </div><!-- End .product-top -->
                                             <div class="product-meta">
                                                 <div class="product-brand">
@@ -96,8 +96,7 @@
 
                                             <div class="product-action">
                                                 <a href="#" class="btn-add-cart" title="Add to Cart" id-item="<?=$producto->m_product_id?>"><i class="icon icon-cart"></i> <span>Agregar a carrito</span></a>
-                                                <a href="#" class="icon btn-product-like" title="Like"><span class="sr-only">Like</span></a>
-                                                <a href="#" class="icon btn-product-compare" title="Compare"><span class="sr-only">Compare</span></a>
+                                               
                                             </div><!-- End .product-action -->
                                         </div><!-- End .product -->
                                     </div><!-- End .product-col -->
@@ -107,7 +106,7 @@
                             </div><!-- End .product-container-row -->
 
                             <nav class="pagination-container">
-                                <label>Showing: 1-4 of 16</label>
+                              <!--   <label>Showing: 1-4 of 16</label> -->
                                 <ul class="pagination">
                                      <?=$paginate_link?>
                                 </ul>
@@ -117,91 +116,8 @@
 
                         <aside class="col-md-3 col-md-pull-9 sidebar">
                             <?php $this->load->view("template/lista_categoria"); ?>
-
-                            <div class="widget filter-box-widget">
-                                <h3 class="widget-title">Color filter</h3>
-                                <div class="widget-body">
-                                    <div class="filter-color-container">
-                                        <div class="row">
-                                            <a href="#" class="filter-color-box" style="background-color: #fff;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #f3eaa2;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #f1dcb1;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #f8b34f;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #aaffff;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #79c5d3;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #a4a9f2;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #6e82ce;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #ad7abd;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #c8e472;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #74d893;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #6cb34d;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #fdb9b9;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #fc7f7f;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #fc568d;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #dcdcdc;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #937c61;"></a>
-                                            <a href="#" class="filter-color-box" style="background-color: #434343;"></a>
-                                        </div><!-- End .row -->
-                                    </div><!-- End .filter-color-container -->
-                                </div><!-- End .widget-body -->
-                            </div><!-- End .widget -->
-
-                            <div class="widget filter-box-widget">
-                                <h3 class="widget-title">Size filter</h3>
-                                <div class="widget-body">
-                                    <div class="filter-color-container">
-                                        <div class="row">
-                                            <a href="#" class="filter-size-box">6</a>
-                                            <a href="#" class="filter-size-box">8</a>
-                                            <a href="#" class="filter-size-box">10</a>
-                                            <a href="#" class="filter-size-box">12</a>
-                                            <a href="#" class="filter-size-box">14</a>
-                                            <a href="#" class="filter-size-box">16</a>
-                                            <a href="#" class="filter-size-box">XS</a>
-                                            <a href="#" class="filter-size-box">S</a>
-                                            <a href="#" class="filter-size-box">M</a>
-                                            <a href="#" class="filter-size-box">ML</a>
-                                            <a href="#" class="filter-size-box">L</a>
-                                            <a href="#" class="filter-size-box">XL</a>
-                                        </div><!-- End .row -->
-                                    </div><!-- End .filter-color-container -->
-                                </div><!-- End .widget-body -->
-                            </div><!-- End .widget -->
-
                             <div class="widget">
-                                <h3 class="widget-title">Price filter</h3>
-                                
-                                <div class="widget-body">
-                                    <div id="filter-range-details" class="row">
-                                        <div class="col-xs-6">
-                                            <div class="filter-price-container">
-                                                <input type="text" id="price-range-low" class="form-control">
-                                                <div class="price-label">
-                                                    <span class="hidden-md">From: </span><span id="low-price-val"></span>
-                                                </div><!-- End .price-label -->
-                                            </div><!-- End .filter-price-container -->
-                                        </div><!-- End .col-xs-6 -->
-                                        <div class="col-xs-6">
-                                            <div class="filter-price-container">
-                                                <input type="text" id="price-range-high" class="form-control">
-                                                <div class="price-label">
-                                                    <span class="hidden-md">To: </span><span id="high-price-val"></span>
-                                                </div><!-- End .price-label -->
-                                            </div><!-- End .filter-price-container -->
-                                        </div><!-- End .col-xs-6 -->
-                                    </div><!-- End #filter-range-details -->
-
-                                    <div id="price-slider"></div><!-- End #price-slider -->
-
-                                    <div class="filter-price-action">
-                                        <a href="#" class="btn btn-border">Ok</a>
-                                        <a href="#" class="btn btn-border">Clear</a>
-                                    </div><!-- End #filter-price-action -->
-                                </div><!-- End .widget-body -->
-                            </div><!-- End .widget -->
-
-                            <div class="widget">
-                                <h3 class="widget-title">Bestsellers</h3>
+                                <h3 class="widget-title">Nuestras marcas</h3>
                                 <div class="swiper-container bestsellers-slider">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">

@@ -1,6 +1,6 @@
 <div class="swiper-container partners-small-carousel">
 	<div class="carousel-header bordered">
-		<h2 class="carousel-title text-center">MANUFACTURERS</h2>
+		<h2 class="carousel-title text-center">NUESTRAS MARCAS</h2>
 		<div class="swiper-nav-wrapper">
 			<div class="swiper-button-prev icon"></div>
 			<!-- End .button-prev -->

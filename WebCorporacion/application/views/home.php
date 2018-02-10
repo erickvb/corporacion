@@ -18,27 +18,16 @@
                 
                 	<? $this->load->view("template/productos");?>
 
-                            <div class="mb45 visible-lg"></div><!-- margin -->
+                            <!--<div class="mb45 visible-lg"></div> margin -->
 
-                            <? $this->load->view("layout/banner2");?>
+                            <? //$this->load->view("layout/banner2");?>
 
-                            <div class="mb90 mb60-sm mb40-xs"></div><!-- margin -->
-							
-							<? $this->load->view("layout/especial-productos");?>
-                            
-                            <div class="mb100 mb70-sm mb30-xs"></div><!-- margin -->
-
-                            <? $this->load->view("layout/fans-page");?>
-
-                           <? $this->load->view("layout/top-rating");?>
-
-                            <div class="mb70 mb35-sm"></div><!-- margin -->
-							<? $this->load->view("layout/the-blog");?>
-                            <div class="mb20 mb0-xs"></div><!-- margin -->
+							<? //$this->load->view("layout/especial-productos");?>
+         					 <div class="mb20 mb0-xs"></div><!-- margin -->
 							<? $this->load->view("layout/manufacturer");?>
                             
 
-                            <div class="mb90-sm mb70-xs visible-sm visible-xs"></div><!-- margin -->
+                            <!--<div class="mb90-sm mb70-xs visible-sm visible-xs"></div> margin -->
                             
                         </div><!-- End .col-md-9 -->
  	  		

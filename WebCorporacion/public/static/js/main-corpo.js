@@ -37,7 +37,12 @@ $(document).ready(function(){
     $(".btn-add-cart").click(function(){
     	console.log("click")
     	var id = $(this).attr("id-item");
-    	addItemCarrito(id, 1);
+    	var valInput = $("#txtCantidadCartPut").val();
+    	var cantidad =1;
+    	if(valInput!=undefined &&  valInput > 0){
+    		cantidad = valInput; 
+    	}
+    	addItemCarrito(id, cantidad);
     	
     });
     

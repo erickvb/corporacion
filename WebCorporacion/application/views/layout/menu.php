@@ -108,46 +108,8 @@
 						</span>
 					</button>
 					<div class="dropdowns-wrapper">
-						<div class="dropdown header-dropdown login-dropdown">
-							<a href="#" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false"> <i class="icon icon-header icon-lock"></i>
-							</a>
-
-							<div class="dropdown-menu">
-								<div class="dropdown-title">Register Form</div>
-								<form action="#">
-									<div class="form-group label-overlay">
-										<input type="text" class="form-control" required> <label
-											class="input-desc"><i class="icon input-icon input-user"></i>Enter
-											your username <span class="input-required">*</span></label>
-									</div>
-									<!-- End .form-group -->
-									<div class="form-group label-overlay">
-										<input type="email" class="form-control" required> <label
-											class="input-desc"><i class="icon input-icon input-email"></i>Enter
-											your email <span class="input-required">*</span></label>
-									</div>
-									<!-- End .form-group -->
-									<div class="form-group label-overlay">
-										<input type="password" class="form-control" required> <label
-											class="input-desc"><i class="icon input-icon input-password"></i>Enter
-											your password <span class="input-required">*</span></label>
-									</div>
-									<!-- End .form-group -->
-									<div class="form-group label-overlay">
-										<input type="password" class="form-control" required> <label
-											class="input-desc"><i class="icon input-icon input-password"></i>Repeat
-											your password <span class="input-required">*</span></label>
-									</div>
-									<!-- End .form-group -->
-
-									<button type="submit" class="btn btn-custom">Register Account</button>
-								</form>
-							</div>
-							<!-- End .dropdown-menu -->
-						</div>
-						<!-- End .header-dropdown -->
-
+						
+<!-- 
 						<ul class="header-dropdown account-dropdown">
 							<li><a href="#" title="My Account"> <i
 									class="icon icon-header icon-user"></i> <span>My Account</span>
@@ -175,7 +137,7 @@
 									</a></li>
 								</ul></li>
 						</ul>
-
+ -->
 						<div class="dropdown header-dropdown cart-dropdown">
 							<a href="#" data-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false"> <i class="icon icon-header icon-cart"></i>

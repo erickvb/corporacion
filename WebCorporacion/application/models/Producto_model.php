@@ -32,7 +32,8 @@ class Producto_model extends CI_Model {
 		to_char(pprice.pricelist, '9999.99') mayor,
 		to_char(pprice.pricestd, '9999.99') menor,
 			
-		pprice.pricestd as descuento
+		pprice.pricestd as descuento,
+         mp.name as marca_producto
 			
 			
 		from
@@ -47,6 +48,8 @@ class Producto_model extends CI_Model {
 		on (lversion.M_PriceList_ID=lista.M_PriceList_ID)
 		left join adempiere.C_Currency mone
 		on (lista.C_Currency_ID=mone.C_Currency_ID)
+
+        inner join adempiere.mas_marca  mp on mp.mas_marca_id=pro.mas_marca_id	
 		where
 		pro.isactive='Y' and
 		pro.is_ultimas_ofertas='Y'

@@ -12,6 +12,7 @@ class Producto extends CI_Controller{
 		$this->load->model("producto_model");
 		$this->config_paginate['base_url'] = site_url('/producto/listado');
 		$this->config_paginate['first_url'] =  site_url('/producto');
+		
 	}
 	
 	public function  index(){
@@ -91,6 +92,9 @@ class Producto extends CI_Controller{
 		$this->config_paginate['first_tag_close'] = '</li>';
 		$this->config_paginate['last_tag_open'] = '<li>';
 		$this->config_paginate['last_tag_close'] = '</li>';
+	
+		$this->config_paginate['first_link'] = 'Primero';
+		$this->config_paginate['last_link'] = 'Ultimo';
 		
 		$this->pagination->initialize($this->config_paginate);
 		return $this->pagination->create_links();
