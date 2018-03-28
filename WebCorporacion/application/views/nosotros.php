@@ -37,7 +37,7 @@
                                     data-splitin="none" 
                                     data-splitout="none" 
                                     data-responsive_offset="off" 
-                                    style="z-index: 7; white-space: nowrap; font-weight:700;">CUSTOMERS HAPPY
+                                    style="z-index: 7; white-space: nowrap; font-weight:700;">CLIENTES 
                                 </div>
 
                                 <!-- LAYER NR. 2 -->
@@ -112,8 +112,6 @@
                 <div class="container-fluid">
                     <blockquote class="lead-quote">
                         <p>Entregar a nuestros clientes más que simplemente partes para sus artefactos, nuestra misión es dar soluciones al hogar, el comercio y la industria. Buscamos la satisfacción total de nuestros clientes.</p>
-                        <p>Visi&oacute;n: Ser la empresa líder en soluciones para artefactos del hogar. Nuestros pilares son la innovación tecnológica, el servicio al cliente y el trabajo eficaz. Ser así la mejor alternativa en el mercado, y cubrir cada una de las necesidades del hogar, el comercio y la industria. </p>
-                        <cite>Christine Peterson, SEO</cite>
                         
                         <cite>Ing. JOhn Sanchez, Gerencia</cite>
                     </blockquote>
@@ -121,7 +119,6 @@
 
                 <div class="story-section">
                     <div class="story-video-col video-gallery" style='background-image: url(<?=base_url()?>public/assets/images/videobg.jpg)'>
-                           <a href="http://www.youtube.com/watch?v=N_2OmTZ08L0" class="icon video-btn"></a>
                            <a href="https://www.youtube.com/watch?v=rtBvlcE5tBw" class="icon video-btn"></a>
                     </div><!-- End .story-video-col -->
 
@@ -140,7 +137,6 @@
                     <div class="table-cell cell-content">
                         <div class="cell-content-wrapper">
                             <h2>Nuestros valores.</h2>
-                            <p>Quisque id ex sapien. Nunc nec odio odio. Phasellus quis quam molestie, ultrices magna ut, euismod lacus. Vivamus posuere justo ut dolor consequat, non fringilla ex tempus. Fusce sit amet ligula risus. Pellentesque ac pretium lectus. Morbi id accumsan enim, sit amet dapibus velit. In lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                             <p><B>Nuestra gente. Nuestro mayor valor.</B></p>
 <p>Fomentamos su motivación e implicación. Creemos en su sentido de la responsabilidad, en su afán de superación y en su orgullo profesional. Les ayudamos en su formación y desarrollo personal, conciliando los objetivos de la empresa con los personales.</p>
 <p>Creamos un entorno cómodo para aprovechar el potencial de cada uno. Promovemos a los que, además de formación profesional, demuestran calidad humana, facilidad de comunicación y empatía. Ofrecemos una estructura que facilite el trabajo en equipo.
@@ -196,19 +192,13 @@ Escuchamos e intentamos responderles siempre.</p>
 
                     <div class="table-cell cell-content">
                         <div class="cell-content-wrapper">
-                            <h2>Our Skills.</h2>
-                            <p>Mauris rhoncus lacinia libero, in ultricies ante porta ut. Pellentesque hendrerit felis odio. Donec sollicitudin libero sit amet lectus aliquet venenatis. Integer consequat, dolor id luctus convallis, nibh risus. Cras enim nulla, luctus sit amet aliquet et, mattis sed diam. Nulla vel ex tincidunt justo gravida tempor sed sit amet lectus. Pellentesque porttitor eros.</p>
-
                             <h2>Destacamos por</h2>
                             <p>Contar más de 10,000 productos en stock, relación comercial con muchas marcas de prestigio, y con 3 locales estratégicamente ubicadas, en la Capital.</p>
                             <h3>Marcas de todos los continentes</h3>
                             <div class="progress-bars-container">
                                 <div class="progress-container">
-                                    <h4 class="progress-title">Wordpress</h4>
                                     <h4 class="progress-title">Americanas</h4>
                                     <div class="progress">
-                                        <div class="progress-bar progress-animate" role="progressbar" data-width="70" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                                            <span class="progress-val">70%</span>
                                         <div class="progress-bar progress-animate" role="progressbar" data-width="90" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                                             <span class="progress-val">90%</span>
                                         </div><!-- End .progress-bar -->
@@ -255,7 +245,7 @@ Escuchamos e intentamos responderles siempre.</p>
                                 
                                 <img src="<?=base_url()?>public/assets/images/socials/twitter.png" alt="twitter" class="social-show-icon">
 
-                                <h2>Ultimos Tweets</h2>
+                                <h2>ULTIMOS TWEETS</h2>
 
                                 <div class="socials-twitter-container">
                                     <div class="swiper-container socials-twitter-slider">
