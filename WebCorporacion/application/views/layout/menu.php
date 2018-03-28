@@ -1,7 +1,7 @@
 <header class="header header4">
 	<div class="header-top">
 		<div class="container-fluid">
-			<div class="header-top-text">Now shipping to Canada.</div>
+			<div class="header-top-text">Ahora Enviamos a Provincia</div>
 			<!-- End .header-top-text -->
 			<ul class="top-dropdowns">
 				<li><a href="#"> <span>Registrese</span>
@@ -60,14 +60,14 @@
 				<div class="header-boxes-container">
 					<div class="header-box">
 						<i class="icon icon-truck"></i>
-						<div class="header-box-title">Free Delivery</div>
-						<p>on all orders</p>
+						<div class="header-box-title">Envio de Paquete</div>
+						<p>a todo distrito</p>
 					</div>
 					<!-- End .header-box -->
 
 					<div class="header-box">
 						<i class="icon icon-phone"></i>
-						<div class="header-box-title text-custom">(01) 242-4595</div>
+						<div class="header-box-title text-custom">(01)242-4595</div>
 						<p>Llamanos</p>
 					</div>
 					<!-- End .header-box -->
@@ -108,8 +108,46 @@
 						</span>
 					</button>
 					<div class="dropdowns-wrapper">
-						
-<!-- 
+						<div class="dropdown header-dropdown login-dropdown">
+							<a href="#" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false"> <i class="icon icon-header icon-lock"></i>
+							</a>
+
+							<div class="dropdown-menu">
+								<div class="dropdown-title">Register Form</div>
+								<form action="#">
+									<div class="form-group label-overlay">
+										<input type="text" class="form-control" required> <label
+											class="input-desc"><i class="icon input-icon input-user"></i>Enter
+											your username <span class="input-required">*</span></label>
+									</div>
+									<!-- End .form-group -->
+									<div class="form-group label-overlay">
+										<input type="email" class="form-control" required> <label
+											class="input-desc"><i class="icon input-icon input-email"></i>Enter
+											your email <span class="input-required">*</span></label>
+									</div>
+									<!-- End .form-group -->
+									<div class="form-group label-overlay">
+										<input type="password" class="form-control" required> <label
+											class="input-desc"><i class="icon input-icon input-password"></i>Enter
+											your password <span class="input-required">*</span></label>
+									</div>
+									<!-- End .form-group -->
+									<div class="form-group label-overlay">
+										<input type="password" class="form-control" required> <label
+											class="input-desc"><i class="icon input-icon input-password"></i>Repeat
+											your password <span class="input-required">*</span></label>
+									</div>
+									<!-- End .form-group -->
+
+									<button type="submit" class="btn btn-custom">Register Account</button>
+								</form>
+							</div>
+							<!-- End .dropdown-menu -->
+						</div>
+						<!-- End .header-dropdown -->
+
 						<ul class="header-dropdown account-dropdown">
 							<li><a href="#" title="My Account"> <i
 									class="icon icon-header icon-user"></i> <span>My Account</span>
@@ -137,14 +175,14 @@
 									</a></li>
 								</ul></li>
 						</ul>
- -->
+
 						<div class="dropdown header-dropdown cart-dropdown">
 							<a href="#" data-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false"> <i class="icon icon-header icon-cart"></i>
-								<span class="dcart-total-count"></span>
+								<span class="dcart-total-count">2</span>
 							</a>
 
-							<div class="dropdown-menu" id="show-menu-cart">
+							<div class="dropdown-menu">
 								<p id="total-cart">
 								
 								</p>
@@ -154,16 +192,21 @@
 
 								<div class="dcart-action-container">
 									<div class="dcart-action-info">
-										
 										<p>
-											Total: <span class="text-custom" id="menu-total-cart"></span>
+											Shipping: <span class="text-custom">$7.00</span>
+										</p>
+										<p>
+											Tax: <span>Free</span>
+										</p>
+										<p>
+											Total: <span class="text-custom">$665.00</span>
 										</p>
 									</div>
 									<!-- End .dcart-action-info -->
 
 									<div class="dcart-action">
-										<a href="<?=site_url('carrito/lista')?>" class="btn btn-custom4 btn-sm">Ver carrito</a> 
-										<a href="<?=site_url('/carrito/checkout')?>" class="btn btn-custom btn-sm">Checkout</a>
+										<a href="<?=site_url('carrito/lista')?>" class="btn btn-custom4 btn-sm">View Cart</a> <a
+											href="#" class="btn btn-custom btn-sm">Checkout</a>
 									</div>
 									<!-- End .dcart-action -->
 									
@@ -217,9 +260,8 @@
 <script id="cart-resumen" type="text/x-handlebars-template">
 <div class="product product-sm">
 										<figure>
-											<a href="#"> 
-                                               <img 
-												src="{{options.imagen}}"
+											<a href="#"> <img
+												src="assets/images/products/thumbs/product1.jpg"
 												alt="Product">
 											</a>
 										</figure>
@@ -228,12 +270,12 @@
 												<a href="#">{{name}}</a>
 											</h5>
 											<div class="product-price-container">
-												<span class="product-price">S/{{subtotal}}</span>
+												<span class="product-price">{{money}}{{subtotal}}</span>
 											</div>
 											<!-- End .product-price-container -->
 										</div>
 										<!-- End .product-meta -->
-										<a href="javascript:;" class="icon delete-btn lighter"
-											title="Delete Product" id-item="{{id}}"><span class="sr-only">Delete product</span></a>
+										<a href="#" class="icon delete-btn lighter"
+											title="Delete Product"><span class="sr-only">Delete product</span></a>
 									</div>
 </script>

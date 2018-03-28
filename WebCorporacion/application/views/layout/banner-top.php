@@ -8,7 +8,8 @@
                                             ?>
                                             
                                         <div class="item <?=$counter_total==0?'active':'' ?>">
-                                            <img src="<?=base_url()."public/".$item_banner->url_bannerh?>" alt="Entry">
+                                            <!--<img src="<?=base_url()."public/".$item_banner->url_bannerh?>" alt="Entry"> -->
+                                            <img src="<?=base_url()?>public/assets/images/blog/single/image1.jpg" alt="Entry">
                                         </div><!-- End .item -->
 <?php 
 $counter_total++;

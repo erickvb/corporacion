@@ -1,10 +1,11 @@
 <div class="socials-section smaller">
                                 <div id="socials-feed-slider" class="carousel slide" data-ride="carousel" data-interval="7000">
                                     <div class="carousel-inner">
-                                        <div class="item active container-fluid" style='background-image: url(assets/images/socials/twitterbg.jpg)'>
-                                            <img src="assets/images/socials/twitter.png" alt="twitter" class="social-show-icon">
+                                        <div class="item active container-fluid" style='background-image: url(<?=base_url()?>public/assets/images/socials/twitterbg.jpg)'>
+                                
+                                <img src="<?=base_url()?>public/assets/images/socials/twitter.png" alt="twitter" class="social-show-icon">
 
-                                            <h2>LATEST TWEETS</h2>
+                                            <h2>ULTIMOS TWEETS</h2>
 
                                             <div class="socials-twitter-container">
                                                 <div class="swiper-container socials-twitter-slider">
@@ -34,8 +35,8 @@
 
                                         </div><!-- End .item -->
 
-                                        <div class="item container-fluid" style='background-image: url(assets/images/socials/facebookbg.jpg)'>
-                                            <img src="<?=base_url()?>public/assets/images/socials/facebook.png" alt="facebook" class="social-show-icon">
+                                       <div class="item container-fluid" style='background-image: url(<?=base_url()?>public/assets/images/socials/twitterbg.jpg)'>
+                                <img src="<?=base_url()?>public/assets/images/socials/facebook.png" alt="facebook" class="social-show-icon">
 
                                             <h2>OUR FANS</h2>
 
@@ -85,8 +86,8 @@
                                             </div><!-- End .socials-facebook-container -->
                                         </div><!-- End .item -->
 
-                                        <div class="item container-fluid" style='background-image: url(assets/images/socials/youtubebg.jpg)'>
-                                            <img src="<?=base_url()?>public/assets/images/socials/youtube.png" alt="youtube" class="social-show-icon">
+                                       <div class="item container-fluid" style='background-image: url(<?=base_url()?>public/assets/images/socials/twitterbg.jpg)'>
+                                <img src="<?=base_url()?>public/assets/images/socials/youtube.png" alt="youtube" class="social-show-icon">
 
                                             <h2>LATEST VIDEO</h2>
                                             <div class="socials-youtube-container">
