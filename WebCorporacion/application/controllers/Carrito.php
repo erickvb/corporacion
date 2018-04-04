@@ -49,7 +49,8 @@ class Carrito extends CI_Controller{
             $lista [] = $items;
         }
             
-        echo json_encode($lista);
+        //echo json_encode($lista);
+        $this->output->set_content_type('application/json')->set_output(json_encode($lista));
     }
     public function updateItem(){
         $data = array(
