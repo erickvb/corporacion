@@ -6,6 +6,8 @@ class Carrito extends CI_Controller{
         parent::__construct();
         
         $this->load->library('cart');
+		$this->cart->product_name_safe = FALSE;
+		
         $this->load->model("producto_model");
     }   
     public function lista(){
