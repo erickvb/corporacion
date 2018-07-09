@@ -184,10 +184,10 @@ class Producto_model extends CI_Model {
 			     inner join adempiere.mas_marca  mp on mp.mas_marca_id=pro.mas_marca_id	
 				where
 				pro.isactive='Y'
-				--and
-				--pricev.M_PriceList_Version_ID=1000000
-				--and
-				--lista.M_PriceList_ID=1000026 
+				and
+				pricev.M_PriceList_Version_ID=1000000
+				and
+				lista.M_PriceList_ID=1000026 
 				limit ".$limit." offset ".$offset;
 		
 		$query = $this->db->query($sql);
@@ -226,7 +226,11 @@ class Producto_model extends CI_Model {
 				inner join adempiere.m_product_category  cp on cp.m_product_category_id=pro.m_product_category_id
 			    inner join adempiere.mas_marca  mp on mp.mas_marca_id=pro.mas_marca_id
 					WHERE
-				pro.isactive='Y' "
+				pro.isactive='Y'
+				and
+				pricev.M_PriceList_Version_ID=1000000
+				and
+				lista.M_PriceList_ID=1000026 "
 				.$where;
 				
 				/*--and
@@ -292,8 +296,13 @@ class Producto_model extends CI_Model {
 				inner join adempiere.m_product_category  cp on cp.m_product_category_id=pro.m_product_category_id
 				
 				WHERE
-				pro.isactive='Y' 
-				
+				pro.isactive='Y' and
+				pro.ad_org_id=0
+				and
+				pricev.M_PriceList_Version_ID=1000000
+				and
+				lista.M_PriceList_ID=1000026
+
 				".$where." 
 				limit ".$limit." offset ".$offset;
 	
@@ -352,6 +361,10 @@ class Producto_model extends CI_Model {
             where
               pro.isactive='Y' and
               pro.m_product_id=".$m_product_id."
+              and
+              pricev.M_PriceList_Version_ID=1000000
+              and
+              lista.M_PriceList_ID=1000026
              ";
 	/*
 	  		 and
