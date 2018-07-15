@@ -124,7 +124,7 @@
                                                         <input type="text" class="form-control" value="1" name="txtCantidad" id="txtCantidadCartPut" />
                                                     </div><!-- End .product-quantity -->
                                                     <div class="product-action">
-                                                        <a href="javascript:;" class="btn-add-cart custom2" title="Add to Cart" id-item="<?=$producto->m_product_id?>"><i class="icon icon-cart"></i> <span>Agregar a Carrito</span></a>
+                                                        <a href="javascript:;" class="btn-add-cart custom2" title="Agregar a carrito" id-item="<?=$producto->m_product_id?>"><i class="icon icon-cart"></i> <span>Agregar a Carrito</span></a>
                                                         
                                                     </div><!-- End .product-action -->
                                                 </div><!-- End .product-action-wrapper -->
@@ -179,7 +179,7 @@
                                                         <span class="product-price"><?=$item->moneda." ".$item->menor?></span>
                                                     </div><!-- End .product-price-container -->
                                                     <div class="product-action">
-                                                        <a href="#" class="btn-add-cart" title="Add to Cart"><i class="icon icon-cart"></i> <span>Agregar a carrito</span></a>
+                                                        <a href="#" class="btn-add-cart" title="Agregar a carrito"><i class="icon icon-cart"></i> <span>Agregar a carrito</span></a>
                                                       
 
                                                     </div><!-- End .product-action -->

@@ -24,10 +24,6 @@
                                                             <label class="input-desc"><i class="icon input-icon input-user"></i>Ingresa tus nombres <span class="input-required">*</span></label>
                                                         </div><!-- End .form-group -->
                                                         <div class="form-group label-overlay">
-                                                            <input type="text" class="form-control" required name="apellidos">
-                                                            <label class="input-desc"><i class="icon input-icon input-user"></i>Ingresa tus apellidos <span class="input-required">*</span></label>
-                                                        </div><!-- End .form-group -->
-                                                        <div class="form-group label-overlay">
                                                             <input type="email" class="form-control" required name="email">
                                                             <label class="input-desc"><i class="icon input-icon input-email"></i>Ingresa tu email <span class="input-required">*</span></label>
                                                         </div><!-- End .form-group -->
@@ -36,61 +32,14 @@
                                                             <label class="input-desc"><i class="icon input-icon input-phone"></i>Ingresa tu nro. telefono <span class="input-required">*</span></label>
                                                         </div><!-- End .form-group -->
                                                        
-                                                        <div class="form-group label-overlay">
-                                                            <input type="text" class="form-control" required name="empresa">
-                                                            <label class="input-desc"><i class="icon input-icon input-suitcase"></i>Ingresa  tu empresa <span class="input-required">*</span></label>
-                                                        </div><!-- End .form-group -->
-                                                       
-                                                        <div class="mb15"></div><!-- margin -->
+                                                         <div class="mb15"></div><!-- margin -->
 
-                                                        <div class="checkbox">
-                                                          <label class="custom-checkbox-wrapper">
-                                                            <span class="custom-checkbox-container">
-                                                                <input type="checkbox" name="checkSuscribe" value="jeans">
-                                                                <span class="custom-checkbox-icon"></span>
-                                                            </span>
-                                                           <span>Deseo suscribirme al bolet&iacute;n de Corporaci&oacute;n de Repuestos.</span>
-                                                          </label>
-                                                        </div><!-- End .checkbox -->
+                                                       
 													</div><!-- End .col-sm-6 -->
 
                                                     <div class="mb40 visible-xs"></div><!-- margin -->
-
-                                                    <div class="col-sm-6">
-                                                        <h3>DATOS DE DIRECCI&Oacute;N</h3>
-                                                        <div class="form-group label-overlay">
-                                                            <input type="text" class="form-control" required name="direccion1">
-                                                            <label class="input-desc"><i class="icon input-icon input-pin"></i>Ingrese direcci&oacute;n 1 <span class="input-required">*</span></label>
-                                                        </div><!-- End .form-group -->
-                                                        <div class="form-group label-overlay">
-                                                            <input type="text" class="form-control" name="direccion2">
-                                                            <label class="input-desc"><i class="icon input-icon input-pin"></i>Ingrese direcci&oacute;n 2</label>
-                                                        </div><!-- End .form-group -->
-                                                        <div class="form-group label-overlay">
-                                                            <input type="text" class="form-control" required name="ciudad">
-                                                            <label class="input-desc"><i class="icon input-icon input-city"></i>Ingrese ciudad <span class="input-required">*</span></label>
-                                                        </div><!-- End .form-group -->
-                                                        <div class="form-group label-overlay">
-                                                            <input type="text" class="form-control" required name="distrito">
-                                                            <label class="input-desc"><i class="icon input-icon input-postcode"></i>Ingrese distrito <span class="input-required">*</span></label>
-                                                        </div><!-- End .form-group -->
-                                                        
-
-                                                        <div class="mb15"></div><!-- margin -->
-
-                                                        <div class="checkbox">
-                                                          <label class="custom-checkbox-wrapper">
-                                                            <span class="custom-checkbox-container">
-                                                                <input type="checkbox" name="checkAcuerdo" value="jeans">
-                                                                <span class="custom-checkbox-icon"></span>
-                                                            </span>
-                                                           <span>he le&iacute;do y estoy de acuerdo con <a href="#">Politicas de privacidad</a>.</span>
-                                                          </label>
-                                                        </div><!-- End .checkbox -->
-                                                    </div><!-- End .col-sm-6 -->
-                                                   
-                                                </div><!-- End .row -->
-                                                <div class="mb80"></div>
+												</div><!-- End .row -->
+                                                
                                             </div><!-- End .panel-body -->
                                         </div><!-- End .panel-collapse -->
                                     </div><!-- End .panel -->

@@ -17,6 +17,7 @@
 
         <link rel="stylesheet" href="<?=base_url()?>public/assets/css/plugins.min.css">
         <link rel="stylesheet" href="<?=base_url()?>public/assets/css/style.css">
+         <link rel="stylesheet" href="<?=base_url()?>public/static/css/custom.css">
         <script type="text/javascript">
         var URL_SITE_WEB ="<?=site_url()?>";
         </script>

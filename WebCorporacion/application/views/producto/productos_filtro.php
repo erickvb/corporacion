@@ -95,7 +95,7 @@
                                             </div><!-- End .product-price-container -->
 
                                             <div class="product-action">
-                                                <a href="#" class="btn-add-cart" title="Add to Cart" id-item="<?=$producto->m_product_id?>"><i class="icon icon-cart"></i> <span>Agregar a carrito</span></a>
+                                                <a href="javascript:;" class="btn-add-cart" title="Agregar a carrito" id-item="<?=$producto->m_product_id?>"><i class="icon icon-cart"></i> <span>Agregar a carrito</span></a>
                                                
                                             </div><!-- End .product-action -->
                                         </div><!-- End .product -->

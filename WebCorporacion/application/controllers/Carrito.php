@@ -1,4 +1,4 @@
-<?php
+<?php   ob_start();
 class Carrito extends CI_Controller{
     public function __construct()
     {
@@ -38,8 +38,15 @@ class Carrito extends CI_Controller{
             'options' => array('money' => $producto->moneda, 'imagen' => $producto->url_image)
             
         );
-        $this->cart->insert($data);
-        echo json_encode($data);
+        if($this->cart->insert($data)){
+            $response = array('estado'=>0,'mensaje'=>'Producto agregado satisfactoriamente');
+            
+        }else{
+            $response = array('estado'=>1,'mensaje'=>'No se puedo agregar el producto, por favor intente nuevamente.');
+            
+        }
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
+       
     }
     
     public  function  listarItems(){
@@ -97,17 +104,21 @@ class Carrito extends CI_Controller{
     
     public function registrarPedido(){
         $nombres = $this->input->post('nombres');
-        $apellidos = $this->input->post('apellidos');
+        //$apellidos = $this->input->post('apellidos');
         $email = $this->input->post('email');
         $nroTelefono= $this->input->post('nroTelefono');
-        $empresa= $this->input->post('empresa');
+        /*$empresa= $this->input->post('empresa');
         $direccion1= $this->input->post('direccion1');
         $direccion2= $this->input->post('direccion2');
         $ciudad= $this->input->post('ciudad');
         $distrito= $this->input->post('distrito');
         
+        */
+        
+        $empresa = "";
+        
         $this->load->model("cliente_model");
-        $id_cliente = $this->cliente_model->add("1000004",$nombres." ".$apellidos,$email,$empresa,$nroTelefono);
+        $id_cliente = $this->cliente_model->add("1000004",$nombres,$email,$empresa,$nroTelefono);
         
         $lista_cart = array();
         if($id_cliente > 0){
@@ -157,7 +168,7 @@ class Carrito extends CI_Controller{
         if($contador>0){
             $data_view = array( "lista_cart"=>$lista_cart,'info'=>array(
                 'id_pedido'=>$id_pedido,
-                'nombres'=> $nombres." ".$apellidos,
+                'nombres'=> $nombres,
                 'telefono'=>$nroTelefono,
                 'email'=>$email
             )
@@ -181,30 +192,61 @@ class Carrito extends CI_Controller{
     } 
     
     private function sendEmail($html,$email){
-        $this->load->library('email');
-        $config['mailtype'] = 'html';
-        $this->email->initialize($config);
-        
-        $this->email->from("info@corporacionderepuestos.com","info");
-        //$this->email->to($this->config->item('info_email'));
-        
-        $this->email->to("ventas@corporacionderepuestos.com");
-        /*if(strlen($copiaEmail)> 0){
-            $cc = $email.",".str_replace(";",",",$copiaEmail);
+        try {
+            $this->load->library('email');
+            $config['mailtype'] = 'html';
+            $this->email->initialize($config);
             
-            $this->email->cc($cc);
+            $this->email->from("info@corporacionderepuestos.com","info");
+            //$this->email->to($this->config->item('info_email'));
             
-        }else{
-            */
+            $this->email->to("ventas@corporacionderepuestos.com");
+            /*if(strlen($copiaEmail)> 0){
+             $cc = $email.",".str_replace(";",",",$copiaEmail);
+             
+             $this->email->cc($cc);
+             
+             }else{
+             */
             $this->email->cc($email);
-       // }
+            // }
+            
+            $this->email->subject("Cotizacion Pedido  web");
+            $this->email->message($html);
+            
+            $this->email->send();
+            //echo $this->email->print_debugger();
+            //$msg = 'Gracias '.$nombres.'. <br>Se envio correctamente su solicitud de cotizacion,<br> en breves estaremos comunicandonos con Usted';
+            
+        } catch (Exception $e) {
+           // echo 'Caught exception: ',  $e->getMessage(), "\n";
+        }
+     }
+    
+    
+    public function deleteItem(){
+        $rowid = $this->uri->segment(3, 0);
         
-        $this->email->subject("Cotizacion Pedido  web");
-        $this->email->message($html);
-        
-        $this->email->send();
-        //echo $this->email->print_debugger();
-        //$msg = 'Gracias '.$nombres.'. <br>Se envio correctamente su solicitud de cotizacion,<br> en breves estaremos comunicandonos con Usted';
+       if($this->cart->remove($rowid)){
+           $data = array('estado'=>0,'mensaje'=>'Exito');
+       }else{
+           $data = array('estado'=>1,'mensaje'=>'Error');
+       }
+        $this->output->set_content_type('application/json')->set_output(json_encode($data));
+                
     }
     
+    public function updateCantidad(){
+        $id_item_cart = $this->uri->segment(3, 0);
+        $cantidad = $this->uri->segment(4, 1);
+       // $producto = $this->producto_model->getProduct($product_id);
+        
+        
+        $data = array(
+            'rowid'      => $id_item_cart,
+            'qty'     => $cantidad
+        );
+        $this->cart->update($data);
+        return $this->listarItems();
+    }
 }

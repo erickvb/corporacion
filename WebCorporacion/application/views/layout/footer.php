@@ -124,7 +124,12 @@
                 </div><!-- End .footer-bottom -->
             </footer><!-- End .footer -->
 
-       
+<div class="modal-wrapper " id="popup">
+		<div class="popup-contenedor">
+			<h2 ><img  src="<?=base_url()?>public/assets/images/icons/icon-dropdown-check.png"><span class="mensage-add-item"></span></h2>
+			<a class="popup-cerrar" href="javascript:;">X</a>
+		</div>
+</div>
 
         <!-- End -->
   

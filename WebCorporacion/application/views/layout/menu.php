@@ -214,6 +214,8 @@
 </header>
 <!-- End .header -->
 
+
+
 <script id="cart-resumen" type="text/x-handlebars-template">
 <div class="product product-sm">
 										<figure>
@@ -225,7 +227,7 @@
 										</figure>
 										<div class="product-meta">
 											<h5 class="product-title">
-												<a href="#">{{name}}</a>
+												<a href="#">({{qty}}) {{name}}</a>
 											</h5>
 											<div class="product-price-container">
 												<span class="product-price">S/{{subtotal}}</span>
@@ -234,6 +236,6 @@
 										</div>
 										<!-- End .product-meta -->
 										<a href="javascript:;" class="icon delete-btn lighter"
-											title="Delete Product" id-item="{{id}}"><span class="sr-only">Delete product</span></a>
+											title="Quitar" id-item="{{rowid}}"><span class="sr-only">Quitar</span></a>
 									</div>
 </script>
