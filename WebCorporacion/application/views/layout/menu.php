@@ -50,7 +50,7 @@
 	<div class="header-inner">
 		<div class="container-fluid">
 			<div class="logo">
-				<a href="index.html" title="Sconto - Premium eCommerce Template"> <img
+				<a href="<?=site_url()?>" title="Corporacion de repuestos"> <img
 					src="<?=base_url()?>public/assets/images/logo-index5.png" alt="Sconto">
 				</a>
 			</div>

@@ -1,6 +1,6 @@
  		<meta charset="utf-8">
-        <title>Sconto - Premium eCommerce Template</title>
-        <meta name="description" content="Premium eCommerce Template">
+        <title>Corporacion de repuestos</title>
+        <meta name="description" content="Repuestos de electrodomesticos de las mejores marca en peru">
 
         <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

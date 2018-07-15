@@ -71,7 +71,7 @@
                                             <div class="product-top">
                                                 <figure>
                                                     <a href="<?=site_url('producto/detalle/'.$producto->m_product_id.'')?>">
-                                                        <img src="<?=$producto->url_image?>" alt="<?=$producto->name?>">
+                                                        <img src="<?=$producto->url_image?>" alt="<?=$producto->name?>" width="321"/>
                                                     </a>
                                                 </figure>
                                                 <a href="<?=site_url('producto/detalle/'.$producto->m_product_id.'')?>" class="btn-quickview icon" title="View"><span class="sr-only">Ver</span></a>
