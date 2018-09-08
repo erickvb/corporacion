@@ -1,6 +1,6 @@
 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-md-12">
                              <form action="<?=site_url('/carrito/registrarPedido')?>" method="post" name="frmCliente">
                                                
                             <div class="checkout-section">
@@ -62,6 +62,7 @@
                                                             <tr>
                                                                
                                                                 <th class="product-col"> Nombre de producto</th>
+                                                                <th class="code-col">SKU</th>
                                                                 <th class="code-col">Codigo</th>
                                                                 <th class="price-col">Precio unitario</th>
                                                                 <th class="quantity-col">Cantidad</th>
@@ -91,7 +92,8 @@
                                                                         </div><!-- End .product-content-wrapper -->
                                                                     </div><!-- End .product -->
                                                                 </td>
-                                                                <td class="code-col"><?=$items['id']?></td>
+                                                                 <td class="code-col"><?=$items['options']['sku']?></td>
+                                                                <td class="code-col"><?=$items['options']['value']?></td>
                                                                 <td class="price-col">
                                                                     <div class="product-price-container">
                                                                         

@@ -94,20 +94,28 @@
 
                                                         <h3 class="product-title">
                                                             <a href="#"><?=$producto->name;?></a>
+                                                              
                                                         </h3>
+                                                         
+                                                        
 
                                                         <div class="product-price-container">
+                                                          
                                                          	<span class="product-old-price"><?=$producto->moneda." ".$producto->mayor?></span>
                                                             <span class="product-price"><?=$producto->moneda." ".$producto->menor?></span>
-                                                           
+                                                            
                                                         	</div><!-- End .product-price-container -->
-                                                        <!--  
-                                                        <div class="product-colors">
+                                                          
+                                                       <!-- <div class="product-colors">
+                                                           
                                                             <span style="background-color: #fafafa;"></span>
                                                             <span style="background-color: #949494;"></span>
                                                             <span style="background-color: #548ec4;"></span>
-                                                        </div>.product-colors -->
-
+                                                        </div>  product-colors -->
+														<div class="description-detail-codes">
+                                                          <span> sku: <?=$producto->sku?></span>
+                                                           <span> codigo: <?=$producto->value?><span>
+                                                        </div>	
                                                         <div class="product-action">
                                                             <a href="#" class="btn-add-cart" title="Add to Cart"  id-item="<?=$producto->m_product_id?>"><i class="icon icon-cart"></i> <span>Agregar a carrito</span></a>
                                             

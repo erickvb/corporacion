@@ -1,12 +1,13 @@
  <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-md-12">
 
                             <div class="table-responsive">
                                 <table class="table table-bordered cart-table">
                                     <thead>
                                         <tr>
                                             <th class="product-col"> Nombre de producto</th>
+                                            <th class="code-col">SKU</th>
                                             <th class="code-col">Codigo</th>
                                             <th class="price-col">Precio unitario</th>
                                             <th class="quantity-col">Cantidad</th>
@@ -42,7 +43,8 @@
                                                     </div><!-- End .product-content-wrapper -->
                                                 </div><!-- End .product -->
                                             </td>
-                                            <td class="code-col"><?=$items['id']?></td>
+                                            <td class="code-col"><?=$items['options']['sku']?></td>
+                                            <td class="code-col"><?=$items['options']['value']?></td>
                                             <td class="price-col">
                                                 <div class="product-price-container">
                                                     <!--  <span class="product-old-price">$1500.00</span>-->
@@ -107,9 +109,7 @@
                         
                     </div><!-- End .row -->
                 </div>
-                
-                <!-- Large modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
 
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">

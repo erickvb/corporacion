@@ -35,7 +35,9 @@ class Carrito extends CI_Controller{
             'qty'     => $cantidad,
             'price'   =>  $producto->menor,
             'name'    =>  $producto->name,
-            'options' => array('money' => $producto->moneda, 'imagen' => $producto->url_image)
+            'options' => array('money' => $producto->moneda, 'imagen' => $producto->url_image,
+                'value'=>$producto->value,
+                'sku'=>$producto->sku)
             
         );
         if($this->cart->insert($data)){
@@ -175,8 +177,9 @@ class Carrito extends CI_Controller{
                 
             );
           $html =   $this->load->view('pedido/html_pedido', $data_view,true);
-          $this->sendEmail($html,$email);
-          redirect('/carrito/exito');
+         
+         $this->sendEmail($html,$email);
+         redirect('/carrito/exito');
         }else{
             redirect('/carrito/checkout');
         }
@@ -215,11 +218,11 @@ class Carrito extends CI_Controller{
             $this->email->message($html);
             
             $this->email->send();
-            //echo $this->email->print_debugger();
+           // echo $this->email->print_debugger();
             //$msg = 'Gracias '.$nombres.'. <br>Se envio correctamente su solicitud de cotizacion,<br> en breves estaremos comunicandonos con Usted';
             
         } catch (Exception $e) {
-           // echo 'Caught exception: ',  $e->getMessage(), "\n";
+           echo 'Caught exception: ',  $e->getMessage(), "\n";
         }
      }
     

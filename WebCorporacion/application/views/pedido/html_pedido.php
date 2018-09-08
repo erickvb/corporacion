@@ -37,6 +37,7 @@
  	</th>
  	</tr>
  	<tr>
+ 	<th  style=" padding: 8px;text-align: left;  border-bottom: 1px solid #ddd; background-color: #f2f2f2; text-align: center;">SKU</th>
  	<th  style=" padding: 8px;text-align: left;  border-bottom: 1px solid #ddd; background-color: #f2f2f2; text-align: center;">CODIGO</th>
  	<th  style=" padding: 8px;text-align: left;  border-bottom: 1px solid #ddd; background-color: #f2f2f2; text-align: center;">NOMBRE</th>
  	<th  style=" padding: 8px;text-align: left;  border-bottom: 1px solid #ddd; background-color: #f2f2f2; text-align: center;">IMAGEN</th>
@@ -50,7 +51,9 @@
  	
  	  <?php foreach ($lista_cart as $items){?>
  	  <tr>
- 	   <td  style=" padding: 8px;text-align: left;  border-bottom: 1px solid #ddd;"> <?=$items["id"]?></td>
+ 	   <td  style=" padding: 8px;text-align: left;  border-bottom: 1px solid #ddd;"> <?=$items['options']['sku']?></td>
+ 	   
+ 	   <td  style=" padding: 8px;text-align: left;  border-bottom: 1px solid #ddd;"> <?=$items['options']['value']?></td>
  	   <td  style=" padding: 8px;text-align: left;  border-bottom: 1px solid #ddd;"><?=$items["name"]?></td>
  	   <td  style=" padding: 8px;text-align: left;  border-bottom: 1px solid #ddd;">
  	   <img src="<?=$items['options']['imagen']?>" width="100"/></td>

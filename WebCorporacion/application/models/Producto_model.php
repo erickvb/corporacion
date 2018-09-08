@@ -33,8 +33,9 @@ class Producto_model extends CI_Model {
 		to_char(pprice.pricestd, '9999.99') menor,
 			
 		pprice.pricestd as descuento,
-         mp.name as marca_producto
-			
+         mp.name as marca_producto,
+		pro.sku	,
+        pro.value
 			
 		from
 		adempiere.M_Product pro
@@ -277,7 +278,9 @@ class Producto_model extends CI_Model {
 				 mp.name as marca_producto,
 				mp.mas_marca_id,
 				cp.name as categoria_producto,
-				cp.m_product_category_id as id_categoria
+				cp.m_product_category_id as id_categoria,
+                pro.sku, 
+pro.value
 				
 				FROM
 				adempiere.M_Product pro
@@ -343,7 +346,9 @@ class Producto_model extends CI_Model {
 	
               pro.m_product_category_id,
 				 mp.name as marca_producto,
-				mp.mas_marca_id
+				mp.mas_marca_id,
+             pro.sku,
+ pro.value
             from
               adempiere.M_Product pro
               left join  adempiere.M_ProductPrice pprice

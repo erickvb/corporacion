@@ -103,8 +103,11 @@
                                             </div><!-- End .product-ratings-wrapper -->
 
                                             <ul class="product-meta-list">
-                                                <li><span>Disponibilidad: </span> <span class="text-custom">In Stock</span></li>
-                                                <li><span>Producto Codigo: </span> <?=$producto->m_product_id?></li>
+                                                <li><span>Disponibilidad: </span> <span class="text-custom">En Stock</span></li>
+                                                <li><span>SKU: </span>  <span class="text-custom"><?=$producto->sku?></span></li>
+                                                <li><span>Codigo: </span>  <span class="text-custom"><?=$producto->value?></span></li>
+                                                
+                                              
                                             </ul>
 
                                             <ul class="product-details-list">

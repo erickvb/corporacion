@@ -11,35 +11,8 @@
 				<li class="hidden-xs"><a href="#"> <span>Mis favoritos</span>
 				</a></li>
 
-				<li class="hidden-xs"><a href="#"> <span>Mi carrito</span>
+				<li class="hidden-xs"><a href="<?=site_url('carrito/lista')?>"> <span>Mi carrito</span>
 				</a></li>
-				<li><a href="#"> <i class="icon top-icon top-icon-creditcard"></i> <span>Pedido</span>
-				</a>
-					<ul>
-						<li><a href="#">Us Dollar</a></li>
-						<li><a href="#">Euro</a></li>
-						<li><a href="#">Pound St</a></li>
-						<li><a href="#">Yuan</a></li>
-					</ul></li>
-				<li><a href="#"> <i class="icon top-icon top-icon-flag"></i> <span>Idioma</span>
-				</a>
-					<ul>
-						<li><a href="#"> <img src="assets/images/flags/england.jpg"
-								alt="England Flag"> <span>English</span>
-						</a></li>
-						<li><a href="#"> <img src="assets/images/flags/spain.jpg"
-								alt="Spain Flag"> <span>Spanish</span>
-						</a></li>
-						<li><a href="#"> <img src="assets/images/flags/france.jpg"
-								alt="France Flag"> <span>French</span>
-						</a></li>
-						<li><a href="#"> <img src="assets/images/flags/germany.jpg"
-								alt="Germany Flag"> <span>German</span>
-						</a></li>
-						<li><a href="#"> <img src="assets/images/flags/italy.jpg"
-								alt="Italy Flag"> <span>Italian</span>
-						</a></li>
-					</ul></li>
 			</ul>
 			<!-- End .top-dropdowns -->
 		</div>

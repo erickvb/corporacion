@@ -93,7 +93,10 @@
                                                 <span class="product-old-price"><?=$producto->moneda." ".$producto->mayor?></span>
                                                 <span class="product-price"><?=$producto->moneda." ".$producto->menor?></span>
                                             </div><!-- End .product-price-container -->
-
+											<div class="description-detail-codes">
+                                                          <span> sku: <?=$producto->sku?></span>
+                                                           <span> codigo: <?=$producto->value?><span>
+                                             </div>	
                                             <div class="product-action">
                                                 <a href="javascript:;" class="btn-add-cart" title="Agregar a carrito" id-item="<?=$producto->m_product_id?>"><i class="icon icon-cart"></i> <span>Agregar a carrito</span></a>
                                                
