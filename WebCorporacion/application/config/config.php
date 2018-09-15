@@ -511,6 +511,10 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+/*CONFIG MAIL SERVER*/
+$config['mail.from'] = 'info@corporacionderepuestos.com';
+$config['mail.from.name'] = 'info';
+$config['mail.to'] = 'ventas@corporacionderepuestos.com';
 
 
 

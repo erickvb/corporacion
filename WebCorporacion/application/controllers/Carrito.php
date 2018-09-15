@@ -179,9 +179,9 @@ class Carrito extends CI_Controller{
           $html =   $this->load->view('pedido/html_pedido', $data_view,true);
          
          $this->sendEmail($html,$email);
-         redirect('/carrito/exito');
+       //  redirect('/carrito/exito');
         }else{
-            redirect('/carrito/checkout');
+         //   redirect('/carrito/checkout');
         }
         
     }
@@ -200,10 +200,10 @@ class Carrito extends CI_Controller{
             $config['mailtype'] = 'html';
             $this->email->initialize($config);
             
-            $this->email->from("info@corporacionderepuestos.com","info");
+            $this->email->from($this->config->item('mail.from'),$this->config->item('mail.from.name'));
             //$this->email->to($this->config->item('info_email'));
             
-            $this->email->to("ventas@corporacionderepuestos.com");
+            $this->email->to($this->config->item('mail.to'));
             /*if(strlen($copiaEmail)> 0){
              $cc = $email.",".str_replace(";",",",$copiaEmail);
              
