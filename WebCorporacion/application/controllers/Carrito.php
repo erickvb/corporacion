@@ -179,9 +179,9 @@ class Carrito extends CI_Controller{
           $html =   $this->load->view('pedido/html_pedido', $data_view,true);
          
          $this->sendEmail($html,$email);
-       //  redirect('/carrito/exito');
+          redirect('/carrito/exito');
         }else{
-         //   redirect('/carrito/checkout');
+            redirect('/carrito/checkout');
         }
         
     }
