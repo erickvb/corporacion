@@ -114,10 +114,10 @@
                                                         </div>  product-colors -->
 														<div class="description-detail-codes">
                                                           <span> sku: <?=$producto->sku?></span>
-                                                           <span> codigo: <?=$producto->value?><span>
+                                                           <span> codigo: <?=$producto->value?></span>
                                                         </div>	
                                                         <div class="product-action">
-                                                            <a href="#" class="btn-add-cart" title="Add to Cart"  id-item="<?=$producto->m_product_id?>"><i class="icon icon-cart"></i> <span>Agregar a carrito</span></a>
+                                                            <a href="javascript:;" class="btn-add-cart" title="Agregar a carrito"  id-item="<?=$producto->m_product_id?>"><i class="icon icon-cart"></i> <span>Agregar a carrito</span></a>
                                             
 
                                                         </div><!-- End .product-action -->

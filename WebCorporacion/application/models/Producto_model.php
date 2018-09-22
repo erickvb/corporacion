@@ -57,7 +57,9 @@ class Producto_model extends CI_Model {
 		and
 		pricev.M_PriceList_Version_ID=1000000
 		and
-		lista.M_PriceList_ID=1000026 ";
+		lista.M_PriceList_ID=1000026
+        and
+        length(pro.url_image) > 0  ";
 	
 		$query = $this->db->query($sql);
 	
@@ -202,7 +204,7 @@ class Producto_model extends CI_Model {
 	public function get_all_productos_cuenta_total($idcategoria, $key_busqueda){
 		$where ="";
 		if(!empty($key_busqueda)){
-			$where = 	" AND concat(pro.name,' ',pro.description,' ',mp.name) ILIKE ANY(regexp_split_to_array('".$this->db->escape_str($key_busqueda)."','[,]')::text[])	 ";
+			$where = 	" AND concat(pro.name,' ',pro.description,' ',pro.mas_desripcionweb,' ',mp.name) ILIKE ANY(regexp_split_to_array('".$this->db->escape_str($key_busqueda)."','[,]')::text[])	 ";
 		
 		}
 		if(!empty($idcategoria)){
@@ -231,7 +233,9 @@ class Producto_model extends CI_Model {
 				and
 				pricev.M_PriceList_Version_ID=1000000
 				and
-				lista.M_PriceList_ID=1000026 "
+				lista.M_PriceList_ID=1000026
+                
+                and length(pro.url_image) > 0 "
 				.$where;
 				
 				/*--and
@@ -240,7 +244,7 @@ class Producto_model extends CI_Model {
 				--lista.M_PriceList_ID=1000026 */
 		//echo $sql;
 		$query = $this->db->query($sql);
-	  
+	  //echo $sql;
 		
 		return $query->row();
 	}
@@ -249,7 +253,7 @@ class Producto_model extends CI_Model {
 	public function get_all_productos_filtro($idcategoria, $key_busqueda,$limit , $offset){
 		$where ="";
 		if(!empty($key_busqueda)){
-		  $where = 	" AND concat(pro.name,' ',pro.description,' ',mp.name) ILIKE ANY(regexp_split_to_array('".$this->db->escape_str($key_busqueda)."','[,]')::text[])	 ";
+		  $where = 	" AND concat(pro.name,' ',pro.description,' ',pro.mas_desripcionweb,' ',mp.name) ILIKE ANY(regexp_split_to_array('".$this->db->escape_str($key_busqueda)."','[,]')::text[])	 ";
 		  		
 		}
 		if(!empty($idcategoria)){
@@ -280,7 +284,7 @@ class Producto_model extends CI_Model {
 				cp.name as categoria_producto,
 				cp.m_product_category_id as id_categoria,
                 pro.sku, 
-pro.value
+                pro.value
 				
 				FROM
 				adempiere.M_Product pro
@@ -305,7 +309,7 @@ pro.value
 				pricev.M_PriceList_Version_ID=1000000
 				and
 				lista.M_PriceList_ID=1000026
-
+                and length(pro.url_image) > 0    
 				".$where." 
 				limit ".$limit." offset ".$offset;
 	
@@ -348,7 +352,8 @@ pro.value
 				 mp.name as marca_producto,
 				mp.mas_marca_id,
              pro.sku,
- pro.value
+ pro.value,
+pro.mas_desripcionweb
             from
               adempiere.M_Product pro
               left join  adempiere.M_ProductPrice pprice

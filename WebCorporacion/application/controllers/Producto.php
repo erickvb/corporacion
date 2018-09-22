@@ -116,8 +116,18 @@ class Producto extends CI_Controller{
 		$this->config_paginate['uri_segment'] = 5;
 		$this->config_paginate['first_url'] =  site_url('/producto/buscar/'.$id_categoria.'/'.$text_busqueda);
 		
+		/*si es todos hace null idcategoria*/
+		if($id_categoria=="todos"){
+		    $id_categoria=null;
+		}
 		$data_menu =  $this->menu_model->get_categorias_Menu();
-		$data_categoria = $this->producto_model->get_categoria_by_id($id_categoria);
+		if(empty($id_categoria)){
+		    $data_categoria = (object)array("m_product_category_id"=>"todos","name"=>"TODOS");
+		}else{
+		    $data_categoria = $this->producto_model->get_categoria_by_id($id_categoria);
+		    
+		    
+		}
 		
 		$data_view = $this->lista_producto($id_categoria, $key_busqueda, $offset);
 		$data_view['data_categoria'] = $data_categoria;

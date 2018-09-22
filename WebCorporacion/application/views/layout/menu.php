@@ -57,7 +57,7 @@
 							</a>
 
 							<ul class="dropdown-menu">
-							 <li><a href="javascript:;" class="dropdown-categoria">Todos</a></li>
+							 <li><a href="javascript:;" class="dropdown-categoria" data-id-categoria="todos">Todos</a></li>
 							 <?php  foreach($data_menu as $categoria) {?>
 								<li><a href="javascript:;" class="dropdown-categoria" data-id-categoria="<?=$categoria->m_product_category_id?>"><?=$categoria->name?></a></li>
 								<?php }?>

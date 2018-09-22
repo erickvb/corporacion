@@ -65,23 +65,44 @@ $(document).ready(function(){
     })
     listarItems();
 });
+var counterSleep=9;
+var myVar;
 function addItemCarrito(id, cantidad){
-	$.ajax({
+	 $("#popup").attr("style","visibility:visible");
+	 $(".popup-contenedor.procesando").show();
+	 $(".popup-contenedor.resultado").hide();
+	 counterSleep =9;
+	 $.ajax({
 		  method: "GET",
 		  url: URL_SITE_WEB+"/carrito/addItem/"+id+"/"+cantidad,
 		  success: function(data){
 			  console.log(data)
+			  $(".counter-close-popup").text("10 s")
+			  $(".popup-contenedor.resultado").show();
+			  $(".popup-contenedor.procesando").hide();
 			  $(".mensage-add-item").text(data.mensaje);
-			  $("#popup").attr("style","visibility:visible");
-				
-			  if(data.estado==0){
-				  
-			  }else{
-			  }
+			  myVar = setInterval(myTimer, 1000);
 			  listarItems();
 		  }
 		})
 		
+}
+
+
+function myTimer() {
+	//console.log("current timer:"+counterSleep)
+	$(".counter-close-popup").text(counterSleep+" s")
+   if(counterSleep==1){
+	   myStopFunction();
+	   $("#popup").removeAttr("style","visibility");
+	   return;
+   }
+   
+   counterSleep--;
+}
+
+function myStopFunction() {
+    clearInterval(myVar);
 }
 
 function listarItems(){

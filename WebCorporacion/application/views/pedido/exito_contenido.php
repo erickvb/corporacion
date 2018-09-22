@@ -2,7 +2,7 @@
 			<div class="page-header">
                     <div class="container-fluid">
                         <ol class="breadcrumb">
-                            <li><a href="index.html">Pedido</a></li>
+                            <li><a href="<?=site_url()?>">Pedido</a></li>
                             <li class="active">Confirmaci&oacute;n</li>
                         </ol>
                     </div><!-- End .container-fluid -->

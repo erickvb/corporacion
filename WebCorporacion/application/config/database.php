@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
-$active_group = 'default';
+$active_group = 'prod';
 $query_builder = TRUE;
 
 $db['default'] = array(
@@ -95,3 +95,27 @@ $db['default'] = array(
 	'save_queries' => TRUE,
 	'schema' => 'adempiere'
 );
+
+$db['prod'] = array(
+    'dsn'	=> '',
+    'hostname' => '190.81.53.229',
+    'username' => 'adempiere',
+    'password' => 'adempiere',
+    'database' => 'CR_PRODUCCION',
+    'dbdriver' => 'postgre',
+    'dbprefix' => '',
+    'pconnect' => FALSE,
+    'db_debug' => (ENVIRONMENT !== 'production'),
+    'cache_on' => FALSE,
+    'cachedir' => '',
+    'char_set' => 'utf8',
+    'dbcollat' => 'utf8_general_ci',
+    'swap_pre' => '',
+    'encrypt' => FALSE,
+    'compress' => FALSE,
+    'stricton' => FALSE,
+    'failover' => array(),
+    'save_queries' => TRUE,
+    'schema' => 'adempiere'
+);
+

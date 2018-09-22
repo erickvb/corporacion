@@ -125,9 +125,15 @@
             </footer><!-- End .footer -->
 
 <div class="modal-wrapper " id="popup">
-		<div class="popup-contenedor">
-			<h2 ><img  src="<?=base_url()?>public/assets/images/icons/icon-dropdown-check.png"><span class="mensage-add-item"></span></h2>
+		<div class="popup-contenedor resultado" style="display: none">
+			<h3 ><img  src="<?=base_url()?>public/assets/images/icons/icon-dropdown-check.png">
+			<span class="mensage-add-item"></span>
+			&nbsp;&nbsp;<span class="counter-close-popup" style="font-size: 14px;"></span>
+			</h3>
 			<a class="popup-cerrar" href="javascript:;">X</a>
+		</div>
+		<div class="popup-contenedor procesando">
+		<h3>Procesando...</h3>
 		</div>
 </div>
 
