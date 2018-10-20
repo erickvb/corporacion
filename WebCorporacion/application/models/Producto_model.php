@@ -27,7 +27,9 @@ class Producto_model extends CI_Model {
 		to_char(pprice.cdt_fecha, 'MM') mm,
 		to_char(pprice.cdt_fecha, 'HH24') hh,
 			
-		mone.cursymbol moneda,pro.url_image,pro.name,
+		mone.cursymbol moneda,
+ concat('http://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+pro.name,
 			
 		to_char(pprice.pricelist, '9999.99') mayor,
 		to_char(pprice.pricestd, '9999.99') menor,
@@ -113,7 +115,9 @@ class Producto_model extends CI_Model {
 				to_char(pprice.cdt_fecha, 'HH24') hh,
 					
 					
-				mone.cursymbol moneda,pro.url_image,pro.name,
+				mone.cursymbol moneda,
+ concat('http://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+pro.name,
 					
 				to_char(pprice.pricelist, '9999.99') mayor,
 				to_char(pprice.pricestd, '9999.99') menor,
@@ -160,7 +164,9 @@ class Producto_model extends CI_Model {
 				to_char(pprice.cdt_fecha, 'HH24') hh,
 			
 			
-				mone.cursymbol moneda,pro.url_image,pro.name,
+				mone.cursymbol moneda,
+ concat('http://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+pro.name,
 			
 				to_char(pprice.pricelist, '9999.99') mayor,
 				to_char(pprice.pricestd, '9999.99') menor,
@@ -270,7 +276,9 @@ class Producto_model extends CI_Model {
 				to_char(pprice.cdt_fecha, 'HH24') hh,
 		
 		
-				mone.cursymbol moneda,pro.url_image,pro.name,
+				mone.cursymbol moneda,
+                 concat('http://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+                pro.name,
 		
 				to_char(pprice.pricelist, '9999.99') mayor,
 				to_char(pprice.pricestd, '9999.99') menor,
@@ -339,7 +347,9 @@ class Producto_model extends CI_Model {
               to_char(pprice.cdt_fecha, 'MM') mm,
               to_char(pprice.cdt_fecha, 'HH24') hh,
 	
-              mone.cursymbol moneda,pro.url_image,pro.name,
+              mone.cursymbol moneda,
+ concat('http://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+,pro.name,
 	
               to_char(pprice.pricelist, '9999.99') mayor,
               to_char(pprice.pricestd, '9999.99') menor,
