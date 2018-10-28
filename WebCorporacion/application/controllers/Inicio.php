@@ -18,8 +18,12 @@ class Inicio extends CI_Controller {
 	    $data_productos = $this->producto_model->get_ultimas_ofertas();
 	    
 	    $data_slider = $this->menu_model->get_Slides();
+	    $data_mas_vendidos = $this->producto_model->get_mas_vendidos();
 	    
-	    $data_view = array("data_menu"=>$data_menu,"data_productos"=>$data_productos,"data_slider"=>$data_slider);
+	    $data_view = array("data_menu"=>$data_menu,"data_productos"=>$data_productos,
+	        "data_slider"=>$data_slider,
+	        "data_mas_vendidos"=>$data_mas_vendidos
+	    );
 	     
 		//$curruser = $this->session->userdata('usuario');
 		

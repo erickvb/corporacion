@@ -136,7 +136,7 @@
                                             <div class="product product-sm">
                                                 <figure>
                                                     <a href="#">
-                                                        <img src="assets/images/products/thumbs/product3.jpg" alt="Product">
+                                                        <img src="<?=base_url()?>public/assets/images/products/thumbs/product3.jpg" alt="Product">
                                                     </a>
                                                 </figure>
                                                 <div class="product-meta">

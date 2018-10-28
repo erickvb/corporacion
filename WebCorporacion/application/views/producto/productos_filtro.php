@@ -127,7 +127,7 @@
                                             <div class="product product-sm">
                                                 <figure>
                                                     <a href="#">
-                                                        <img src="assets/images/products/thumbs/product1.jpg" alt="Product">
+                                                        <img src="<?=base_url()?>public/assets/images/products/thumbs/product1.jpg" alt="Product">
                                                     </a>
                                                     <span class="product-label discount">-25%</span>
                                                 </figure>
@@ -144,7 +144,7 @@
                                             <div class="product product-sm">
                                                 <figure>
                                                     <a href="#">
-                                                        <img src="assets/images/products/thumbs/product2.jpg" alt="Product">
+                                                        <img src="<?=base_url()?>public/assets/images/products/thumbs/product2.jpg" alt="Product">
                                                     </a>
                                                 </figure>
                                                 <div class="product-meta">
@@ -159,7 +159,7 @@
                                             <div class="product product-sm">
                                                 <figure>
                                                     <a href="#">
-                                                        <img src="assets/images/products/thumbs/product3.jpg" alt="Product">
+                                                        <img src="<?=base_url()?>public/assets/images/products/thumbs/product3.jpg" alt="Product">
                                                     </a>
                                                 </figure>
                                                 <div class="product-meta">
@@ -177,7 +177,7 @@
                                             <div class="product product-sm">
                                                 <figure>
                                                     <a href="#">
-                                                        <img src="assets/images/products/thumbs/product4.jpg" alt="Product">
+                                                        <img src="<?=base_url()?>public/assets/images/products/thumbs/product4.jpg" alt="Product">
                                                     </a>
                                                 </figure>
                                                 <div class="product-meta">
@@ -192,7 +192,7 @@
                                             <div class="product product-sm">
                                                 <figure>
                                                     <a href="#">
-                                                        <img src="assets/images/products/thumbs/product5.jpg" alt="Product">
+                                                        <img src="<?=base_url()?>public/assets/images/products/thumbs/product5.jpg" alt="Product">
                                                     </a>
                                                     <span class="product-label new">NEW</span>
                                                 </figure>
@@ -209,7 +209,7 @@
                                             <div class="product product-sm">
                                                 <figure>
                                                     <a href="#">
-                                                        <img src="assets/images/products/thumbs/product6.jpg" alt="Product">
+                                                        <img src="<?=base_url()?>public/assets/images/products/thumbs/product6.jpg" alt="Product">
                                                     </a>
                                                 </figure>
                                                 <div class="product-meta">

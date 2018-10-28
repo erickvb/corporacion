@@ -28,7 +28,7 @@ class Producto_model extends CI_Model {
 		to_char(pprice.cdt_fecha, 'HH24') hh,
 			
 		mone.cursymbol moneda,
- concat('http://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+ concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
 pro.name,
 			
 		to_char(pprice.pricelist, '9999.99') mayor,
@@ -116,7 +116,7 @@ pro.name,
 					
 					
 				mone.cursymbol moneda,
- concat('http://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+ concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
 pro.name,
 					
 				to_char(pprice.pricelist, '9999.99') mayor,
@@ -165,7 +165,7 @@ pro.name,
 			
 			
 				mone.cursymbol moneda,
- concat('http://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+ concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
 pro.name,
 			
 				to_char(pprice.pricelist, '9999.99') mayor,
@@ -277,7 +277,7 @@ pro.name,
 		
 		
 				mone.cursymbol moneda,
-                 concat('http://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+                 concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
                 pro.name,
 		
 				to_char(pprice.pricelist, '9999.99') mayor,
@@ -348,8 +348,8 @@ pro.name,
               to_char(pprice.cdt_fecha, 'HH24') hh,
 	
               mone.cursymbol moneda,
- concat('http://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
-,pro.name,
+ concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+pro.name,
 	
               to_char(pprice.pricelist, '9999.99') mayor,
               to_char(pprice.pricestd, '9999.99') menor,
@@ -397,6 +397,59 @@ pro.mas_desripcionweb
 		return $query->row();
 	
 	}
+	
+	function get_mas_vendidos(){
+	    
+	    $sql = "
+		select
+		pprice.cdt_puntos,
+	        
+		pro.m_product_id,
+	        
+		mone.cursymbol moneda,
+ concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+pro.name,
+	        
+		to_char(pprice.pricelist, '9999.99') mayor,
+		to_char(pprice.pricestd, '9999.99') menor,
+	        
+		pprice.pricestd as descuento,
+         mp.name as marca_producto,
+		pro.sku	,
+        pro.value
+	        
+		from
+		adempiere.M_Product pro
+		 left join  adempiere.M_ProductPrice pprice
+		 on (pro.M_Product_ID=pprice.M_Product_ID)
+		left join adempiere.M_PriceList_Version pricev
+		on (pprice.M_PriceList_Version_ID=pricev.M_PriceList_Version_ID)
+		left join adempiere.M_PriceList_Version lversion
+		on (pricev.M_PriceList_Version_ID=1000000)
+		left join adempiere.M_PriceList lista
+		on (lversion.M_PriceList_ID=lista.M_PriceList_ID)
+		left join adempiere.C_Currency mone
+		on (lista.C_Currency_ID=mone.C_Currency_ID)
+	        
+        inner join adempiere.mas_marca  mp on mp.mas_marca_id=pro.mas_marca_id
+		where
+		pro.isactive='Y'
+        and pro.is_masvendidos='Y'
+		and
+		pricev.M_PriceList_Version_ID=1000000
+		and
+		lista.M_PriceList_ID=1000026
+        and
+        length(pro.url_image) > 0  
+         LIMIT 8   
+        ";
+	    
+	    $query = $this->db->query($sql);
+	    
+	    return $query->result();
+	    
+	}
+	
 	
 	function getShipping(){
 		return $this->getProduct(1000024);

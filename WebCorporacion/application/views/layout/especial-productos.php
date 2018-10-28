@@ -71,7 +71,7 @@
 			<div class="swiper-slide">
 				<div class="product product-sm">
 					<figure>
-						<a href="#"> <img src="assets/images/products/thumbs/product1.jpg"
+						<a href="#"> <img src="<?=base_url()?>public/assets/images/products/thumbs/product1.jpg"
 							alt="Product">
 						</a>
 					</figure>
@@ -127,7 +127,7 @@
 				<!-- End .product -->
 				<div class="product product-sm">
 					<figure>
-						<a href="#"> <img src="assets/images/products/thumbs/product3.jpg"
+						<a href="#"> <img src="<?=base_url()?>public/assets/images/products/thumbs/product3.jpg"
 							alt="Product">
 						</a>
 						<span class="product-label">New</span>
@@ -162,7 +162,7 @@
 			<div class="swiper-slide">
 				<div class="product product-sm">
 					<figure>
-						<a href="#"> <img src="assets/images/products/thumbs/product4.jpg"
+						<a href="#"> <img src="<?=base_url()?>public/assets/images/products/thumbs/product4.jpg"
 							alt="Product">
 						</a>
 					</figure>
@@ -191,7 +191,7 @@
 				<!-- End .product -->
 				<div class="product product-sm">
 					<figure>
-						<a href="#"> <img src="assets/images/products/thumbs/product6.jpg"
+						<a href="#"> <img src="<?=base_url()?>public/assets/images/products/thumbs/product6.jpg"
 							alt="Product">
 						</a>
 						<span class="product-label discount">-25%</span>
@@ -221,7 +221,7 @@
 				<!-- End .product -->
 				<div class="product product-sm">
 					<figure>
-						<a href="#"> <img src="assets/images/products/thumbs/product5.jpg"
+						<a href="#"> <img src="<?=base_url()?>public/assets/images/products/thumbs/product5.jpg"
 							alt="Product">
 						</a>
 					</figure>
@@ -255,7 +255,7 @@
 					<div class="product-top">
 						<figure>
 							<a href="#"> <img
-								src="assets/images/products/index5/product-big2.jpg"
+								src="<?=base_url()?>public/assets/images/products/index5/product-big2.jpg"
 								alt="Product Image">
 							</a>
 						</figure>
@@ -306,7 +306,7 @@
 			<div class="swiper-slide">
 				<div class="product product-sm">
 					<figure>
-						<a href="#"> <img src="assets/images/products/thumbs/product2.jpg"
+						<a href="#"> <img src="<?=base_url()?>public/assets/images/products/thumbs/product2.jpg"
 							alt="Product">
 						</a>
 					</figure>
@@ -334,7 +334,7 @@
 				<!-- End .product -->
 				<div class="product product-sm">
 					<figure>
-						<a href="#"> <img src="assets/images/products/thumbs/product3.jpg"
+						<a href="#"> <img src="<?=base_url()?>public/assets/images/products/thumbs/product3.jpg"
 							alt="Product">
 						</a>
 					</figure>
@@ -362,7 +362,7 @@
 				<!-- End .product -->
 				<div class="product product-sm">
 					<figure>
-						<a href="#"> <img src="assets/images/products/thumbs/product1.jpg"
+						<a href="#"> <img src="<?=base_url()?>public/assets/images/products/thumbs/product1.jpg"
 							alt="Product">
 						</a>
 						<span class="product-label">New</span>

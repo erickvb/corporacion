@@ -115,7 +115,7 @@
                             <div class="payment-info">
                                 <h5>100% Secure and Trusted Payment</h5>
                                 <p>Easy returns. Free shipping on orders over $100. Need help? <a href="#">Help Center.</a></p>
-                                <img src="assets/images/cards.png" alt="Payment methods">
+                                <img src="<?=base_url()?>public/assets/images/cards.png" alt="Payment methods">
                             </div><!-- End .payment-info -->
                         </div><!-- End .footer-right -->
 

@@ -4,183 +4,44 @@
 		 <?php $this->load->view("template/lista_categoria"); ?>
 
 		<div class="widget product-count-widget">
-			<h3 class="widget-title">Nuestras marcas</h3>
+			<h3 class="widget-title">MAS VENDIDOS</h3>
 			<div class="swiper-container bestsellers-slider">
 				<div class="swiper-wrapper">
+				
 					<div class="swiper-slide">
+				     <?php $conter = 0;
+				     foreach($data_mas_vendidos as $producto)  {
+				         $conter++;
+				         ?>
+				    
 						<div class="product product-sm">
-							<span class="product-count-number">01</span>
+							<span class="product-count-number"><?=$conter?></span>
 							<figure>
-								<a href="#"> <img
-									src="assets/images/products/thumbs/product1.jpg" alt="Product">
+								<a href="<?=site_url('producto/detalle/'.$producto->m_product_id.'')?>"> <img
+									src="<?=$producto->url_image?>" alt="">
 								</a>
 							</figure>
 							<div class="product-meta">
 								<h5 class="product-title">
-									<a href="#">Navy blue silk pleated dress</a>
+									<a href="<?=site_url('producto/detalle/'.$producto->m_product_id.'')?>"><?=$producto->name?></a>
 								</h5>
 								<div class="product-price-container">
-									<span class="product-old-price">$1200.00</span> <span
-										class="product-price">$980.00</span>
+									<span class="product-old-price"><?=$producto->moneda." ".$producto->mayor?></span> 
+									<span class="product-price"><?=$producto->moneda." ".$producto->menor?></span>
 								</div>
 								<!-- End .product-price-container -->
 
-								<div class="product-colors">
-									<span style="background-color: #d8d8d8;"></span> <span
-										style="background-color: #dba9ec;"></span> <span
-										style="background-color: #454545;"></span>
-								</div>
-								<!-- End .product-colors -->
 							</div>
 							<!-- End .product-meta -->
 						</div>
-						<!-- End .product -->
-						<div class="product product-sm">
-							<span class="product-count-number">02</span>
-							<figure>
-								<a href="#"> <img
-									src="assets/images/products/thumbs/product2.jpg" alt="Product">
-								</a>
-							</figure>
-							<div class="product-meta">
-								<h5 class="product-title">
-									<a href="#">Mustard yellow ruffle dress</a>
-								</h5>
-								<div class="product-price-container">
-									<span class="product-price">$310.00</span>
-								</div>
-								<!-- End .product-price-container -->
-								<div class="ratings-container">
-									<div class="ratings" style="width: 60%;"></div>
-									<!-- End .ratings -->
-								</div>
-								<!-- End .ratings -->
-							</div>
-							<!-- End .product-meta -->
-						</div>
-						<!-- End .product -->
-						<div class="product product-sm">
-							<span class="product-count-number">03</span>
-							<figure>
-								<a href="#"> <img
-									src="assets/images/products/thumbs/product3.jpg" alt="Product">
-								</a>
-							</figure>
-							<div class="product-meta">
-								<h5 class="product-title">
-									<a href="#">Asymmetric crew neck sweater</a>
-								</h5>
-								<div class="product-price-container">
-									<span class="product-old-price">$1670.00</span> <span
-										class="product-price">1300.00</span>
-								</div>
-								<!-- End .product-price-container -->
-							</div>
-							<!-- End .product-meta -->
-						</div>
-						<!-- End .product -->
-						<div class="product product-sm">
-							<span class="product-count-number">04</span>
-							<figure>
-								<a href="#"> <img
-									src="assets/images/products/thumbs/product4.jpg" alt="Product">
-								</a>
-							</figure>
-							<div class="product-meta">
-								<h5 class="product-title">
-									<a href="#">Canon EF Extension Tube Cameras </a>
-								</h5>
-								<div class="product-price-container">
-									<span class="product-price">$1450.00</span>
-								</div>
-								<!-- End .product-price-container -->
-							</div>
-							<!-- End .product-meta -->
-						</div>
-						<!-- End .product -->
-					</div>
-					<!-- End .swiper-slide -->
-
-					<div class="swiper-slide">
-						<div class="product product-sm">
-							<span class="product-count-number">01</span>
-							<figure>
-								<a href="#"> <img
-									src="assets/images/products/thumbs/product5.jpg" alt="Product">
-								</a>
-							</figure>
-							<div class="product-meta">
-								<h5 class="product-title">
-									<a href="#">Asymmetric crew neck sweater</a>
-								</h5>
-								<div class="product-price-container">
-									<span class="product-old-price">$1670.00</span> <span
-										class="product-price">1300.00</span>
-								</div>
-								<!-- End .product-price-container -->
-							</div>
-							<!-- End .product-meta -->
-						</div>
-						<!-- End .product -->
-						<div class="product product-sm">
-							<span class="product-count-number">02</span>
-							<figure>
-								<a href="#"> <img
-									src="assets/images/products/thumbs/product2.jpg" alt="Product">
-								</a>
-							</figure>
-							<div class="product-meta">
-								<h5 class="product-title">
-									<a href="#">Mustard yellow ruffle dress</a>
-								</h5>
-								<div class="product-price-container">
-									<span class="product-price">$180.00</span>
-								</div>
-								<!-- End .product-price-container -->
-							</div>
-							<!-- End .product-meta -->
-						</div>
-						<!-- End .product -->
-						<div class="product product-sm">
-							<span class="product-count-number">03</span>
-							<figure>
-								<a href="#"> <img
-									src="assets/images/products/thumbs/product6.jpg" alt="Product">
-								</a>
-							</figure>
-							<div class="product-meta">
-								<h5 class="product-title">
-									<a href="#">Asymmetric crew neck sweater</a>
-								</h5>
-								<div class="product-price-container">
-									<span class="product-old-price">$280.00</span> <span
-										class="product-price">$160</span>
-								</div>
-								<!-- End .product-price-container -->
-							</div>
-							<!-- End .product-meta -->
-						</div>
-						<!-- End .product -->
-						<div class="product product-sm">
-							<span class="product-count-number">04</span>
-							<figure>
-								<a href="#"> <img
-									src="assets/images/products/thumbs/product3.jpg" alt="Product">
-								</a>
-							</figure>
-							<div class="product-meta">
-								<h5 class="product-title">
-									<a href="#">Navy blue silk pleated dress</a>
-								</h5>
-								<div class="product-price-container">
-									<span class="product-old-price">$300.00</span> <span
-										class="product-price">$21.00</span>
-								</div>
-								<!-- End .product-price-container -->
-							</div>
-							<!-- End .product-meta -->
-						</div>
-						<!-- End .product -->
+						
+						
+						<?php 
+						
+						if($conter%4==0){
+				           echo '</div><div class="swiper-slide">';
+				       }
+				     }?>
 					</div>
 					<!-- End .swiper-slide -->
 				</div>
@@ -208,13 +69,13 @@
 
 					<div class="carousel-inner">
 						<div class="item active">
-							<img src="assets/images/banners/index5/banner6.jpg"
+							<img src="<?=base_url()?>public/assets/images/banners/index5/banner6.jpg"
 								alt="Banner 1">
 						</div>
 						<!-- End .item -->
 
 						<div class="item">
-							<img src="assets/images/banners/index5/banner7.jpg"
+							<img src="<?=base_url()?>public/assets/images/banners/index5/banner7.jpg"
 								alt="Banner 2">
 						</div>
 						<!-- End .item -->
@@ -230,7 +91,7 @@
 		<div class="widget">
 			<div class="widget-body">
 				<div class="banner">
-					<a href="#"> <img src="assets/images/banners/index5/banner8.jpg"
+					<a href="#"> <img src="<?=base_url()?>public/assets/images/banners/index5/banner8.jpg"
 						alt="Banner">
 					</a>
 				</div>
