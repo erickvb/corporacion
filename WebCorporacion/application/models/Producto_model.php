@@ -31,7 +31,8 @@ class Producto_model extends CI_Model {
  concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
 pro.name,
 			
-		to_char(pprice.pricelist, '9999.99') mayor,
+	--	to_char(pprice.pricelist, '9999.99') mayor,
+ to_char(pprice.pricestd* 1.053,'9999.99') mayor,
 		to_char(pprice.pricestd, '9999.99') menor,
 			
 		pprice.pricestd as descuento,
@@ -119,7 +120,8 @@ pro.name,
  concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
 pro.name,
 					
-				to_char(pprice.pricelist, '9999.99') mayor,
+				--to_char(pprice.pricelist, '9999.99') mayor,
+ to_char(pprice.pricestd* 1.053,'9999.99') mayor,
 				to_char(pprice.pricestd, '9999.99') menor,
 					
 				pprice.pricestd as descuento ,
@@ -168,7 +170,8 @@ pro.name,
  concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
 pro.name,
 			
-				to_char(pprice.pricelist, '9999.99') mayor,
+			--	to_char(pprice.pricelist, '9999.99') mayor,
+ to_char(pprice.pricestd* 1.053,'9999.99') mayor,
 				to_char(pprice.pricestd, '9999.99') menor,
 			
 				pprice.pricestd as descuento ,
@@ -210,7 +213,7 @@ pro.name,
 	public function get_all_productos_cuenta_total($idcategoria, $key_busqueda){
 		$where ="";
 		if(!empty($key_busqueda)){
-			$where = 	" AND concat(pro.name,' ',pro.description,' ',pro.mas_desripcionweb,' ',mp.name) ILIKE ANY(regexp_split_to_array('".$this->db->escape_str($key_busqueda)."','[,]')::text[])	 ";
+			$where = 	" AND concat(pro.name,' ',pro.description,' ',pro.mas_desripcionweb,' ',mp.name,' ', pro.sku) ILIKE ANY(regexp_split_to_array('".$this->db->escape_str($key_busqueda)."','[,]')::text[])	 ";
 		
 		}
 		if(!empty($idcategoria)){
@@ -259,7 +262,7 @@ pro.name,
 	public function get_all_productos_filtro($idcategoria, $key_busqueda,$limit , $offset){
 		$where ="";
 		if(!empty($key_busqueda)){
-		  $where = 	" AND concat(pro.name,' ',pro.description,' ',pro.mas_desripcionweb,' ',mp.name) ILIKE ANY(regexp_split_to_array('".$this->db->escape_str($key_busqueda)."','[,]')::text[])	 ";
+		  $where = 	" AND concat(pro.name,' ',pro.description,' ',pro.mas_desripcionweb,' ',mp.name,' ', pro.sku) ILIKE ANY(regexp_split_to_array('".$this->db->escape_str($key_busqueda)."','[,]')::text[])	 ";
 		  		
 		}
 		if(!empty($idcategoria)){
@@ -280,7 +283,10 @@ pro.name,
                  concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
                 pro.name,
 		
-				to_char(pprice.pricelist, '9999.99') mayor,
+				--to_char(pprice.pricelist, '9999.99') mayor,
+
+                to_char(pprice.pricestd* 1.053,'9999.99') mayor,  
+
 				to_char(pprice.pricestd, '9999.99') menor,
 		
 				pprice.pricestd as descuento ,
@@ -351,7 +357,8 @@ pro.name,
  concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
 pro.name,
 	
-              to_char(pprice.pricelist, '9999.99') mayor,
+             -- to_char(pprice.pricelist, '9999.99') mayor,
+ to_char(pprice.pricestd* 1.053,'9999.99') mayor,
               to_char(pprice.pricestd, '9999.99') menor,
 	
               pprice.pricestd as descuento ,
@@ -410,8 +417,9 @@ pro.mas_desripcionweb
  concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
 pro.name,
 	        
-		to_char(pprice.pricelist, '9999.99') mayor,
-		to_char(pprice.pricestd, '9999.99') menor,
+	--	to_char(pprice.pricelist, '9999.99') mayor,
+ to_char(pprice.pricestd* 1.053,'9999.99') mayor,		
+to_char(pprice.pricestd, '9999.99') menor,
 	        
 		pprice.pricestd as descuento,
          mp.name as marca_producto,
