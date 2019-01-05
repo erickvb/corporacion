@@ -117,7 +117,7 @@ pro.name,
 					
 					
 				mone.cursymbol moneda,
- concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+ concat('https://www.corporacionderepuestos.com/imagenes/',pro.sku,'.jpg')  as url_image,
 pro.name,
 					
 				--to_char(pprice.pricelist, '9999.99') mayor,
@@ -167,7 +167,7 @@ pro.name,
 			
 			
 				mone.cursymbol moneda,
- concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+ concat('https://www.corporacionderepuestos.com/imagenes/',pro.sku,'.jpg')  as url_image,
 pro.name,
 			
 			--	to_char(pprice.pricelist, '9999.99') mayor,
@@ -280,7 +280,7 @@ pro.name,
 		
 		
 				mone.cursymbol moneda,
-                 concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+                 concat('https://www.corporacionderepuestos.com/imagenes/',pro.sku,'.jpg')  as url_image,
                 pro.name,
 		
 				--to_char(pprice.pricelist, '9999.99') mayor,
@@ -354,7 +354,7 @@ pro.name,
               to_char(pprice.cdt_fecha, 'HH24') hh,
 	
               mone.cursymbol moneda,
- concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+ concat('https://www.corporacionderepuestos.com/imagenes/',pro.sku,'.jpg')  as url_image,
 pro.name,
 	
              -- to_char(pprice.pricelist, '9999.99') mayor,
@@ -414,7 +414,7 @@ pro.mas_desripcionweb
 		pro.m_product_id,
 	        
 		mone.cursymbol moneda,
- concat('https://www.corporacionderepuestos.com/public/imagenes/thumb2/',pro.sku,'.jpg')  as url_image,
+ concat('https://www.corporacionderepuestos.com/imagenes/',pro.sku,'.jpg')  as url_image,
 pro.name,
 	        
 	--	to_char(pprice.pricelist, '9999.99') mayor,
