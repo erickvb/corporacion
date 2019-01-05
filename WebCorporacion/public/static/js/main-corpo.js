@@ -65,19 +65,19 @@ $(document).ready(function(){
     })
     listarItems();
 });
-var counterSleep=9;
+var counterSleep=2;
 var myVar;
 function addItemCarrito(id, cantidad){
 	 $("#popup").attr("style","visibility:visible");
 	 $(".popup-contenedor.procesando").show();
 	 $(".popup-contenedor.resultado").hide();
-	 counterSleep =9;
+	 counterSleep =2;
 	 $.ajax({
 		  method: "GET",
 		  url: URL_SITE_WEB+"/carrito/addItem/"+id+"/"+cantidad,
 		  success: function(data){
 			  console.log(data)
-			  $(".counter-close-popup").text("10 s")
+			  $(".counter-close-popup").text("3 s")
 			  $(".popup-contenedor.resultado").show();
 			  $(".popup-contenedor.procesando").hide();
 			  $(".mensage-add-item").text(data.mensaje);
