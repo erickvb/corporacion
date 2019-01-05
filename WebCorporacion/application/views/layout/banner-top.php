@@ -21,6 +21,14 @@ $counter_total++;
                                         <div class="item">
                                             <img src="<?=base_url()?>public/assets/images/blog/single/image3.jpg" alt="Entry">
                                         </div><!-- End .item -->
+										
+										<div class="item">
+                                            <img src="<?=base_url()?>public/assets/images/blog/single/image4.jpg" alt="Entry">
+                                        </div><!-- End .item -->
+										
+										<div class="item">
+                                            <img src="<?=base_url()?>public/assets/images/blog/single/image5.jpg" alt="Entry">
+                                        </div><!-- End .item -->
                                     </div><!-- End .carousel-inner -->
 
                                     <a class="left carousel-control light big icon" href="#blog-slider-1" role="button" data-slide="prev"></a>
